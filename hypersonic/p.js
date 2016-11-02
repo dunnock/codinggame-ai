@@ -1,0 +1,1 @@
+print(readline().split('').map(c=>parseInt(c)).map(i=>i>5?9-i:i).join(''))

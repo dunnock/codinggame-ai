@@ -1,0 +1,1 @@
+PYSPARK_PYTHON=python3 ${SPARK_HOME}/bin/pyspark -i ./coders_json.py

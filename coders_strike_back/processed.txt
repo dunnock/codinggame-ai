@@ -1,0 +1,1119 @@
+Statistical profiling result from isolate-0x102800000-v8.log, (17223 ticks, 614 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    444    2.6%          /usr/local/bin/node
+     21    0.1%          /usr/lib/system/libsystem_platform.dylib
+     13    0.1%          /usr/lib/system/libsystem_pthread.dylib
+     11    0.1%          /usr/lib/system/libsystem_c.dylib
+      4    0.0%          /usr/lib/system/libsystem_malloc.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     43    0.2%    0.3%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+     33    0.2%    0.2%  KeyedLoadIC: A keyed load IC from the snapshot
+     28    0.2%    0.2%  Stub: LoadICStub
+     23    0.1%    0.1%  Stub: VectorStoreICStub
+     20    0.1%    0.1%  LazyCompile: ~hypot native math.js:99:19
+     20    0.1%    0.1%  LazyCompile: *insert timers.js:119:16
+     19    0.1%    0.1%  LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:70:21
+     16    0.1%    0.1%  LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+     16    0.1%    0.1%  Builtin: CallFunction_ReceiverIsAny
+     14    0.1%    0.1%  LazyCompile: *nextTick internal/process/next_tick.js:140:20
+     14    0.1%    0.1%  LazyCompile: *OutgoingMessage._storeHeader _http_outgoing.js:190:50
+     13    0.1%    0.1%  Stub: VectorKeyedStoreICStub
+     13    0.1%    0.1%  LazyCompile: ~Socket._writeGeneric net.js:654:42
+     13    0.1%    0.1%  LazyCompile: *resume_ _stream_readable.js:735:17
+     12    0.1%    0.1%  Stub: FastCloneShallowArrayStub
+     12    0.1%    0.1%  Stub: CEntryStub
+     12    0.1%    0.1%  Stub: ArraySingleArgumentConstructorStub
+     12    0.1%    0.1%  LazyCompile: *emit events.js:136:44
+     12    0.1%    0.1%  LazyCompile: *body /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:128:11
+     12    0.1%    0.1%  KeyedLoadIC: A keyed load IC from the snapshot {1}
+     12    0.1%    0.1%  Builtin: Construct
+     12    0.1%    0.1%  Builtin: Call_ReceiverIsAny
+     12    0.1%    0.1%  Builtin: ArgumentsAdaptorTrampoline
+     11    0.1%    0.1%  Stub: InstanceOfStub
+     11    0.1%    0.1%  Stub: FastNewObjectStub
+     11    0.1%    0.1%  LazyCompile: run /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:74:23
+     11    0.1%    0.1%  LazyCompile: flush /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_microtask.js:11:23
+     10    0.1%    0.1%  Stub: LoadConstantStub {2}
+     10    0.1%    0.1%  Stub: FastNewContextStub {1}
+     10    0.1%    0.1%  Stub: BinaryOpICStub {3}
+     10    0.1%    0.1%  LazyCompile: *normalizeStringPosix path.js:78:30
+     10    0.1%    0.1%  Builtin: Call_ReceiverIsNotNullOrUndefined
+      9    0.1%    0.1%  Stub: StoreElementStub
+      9    0.1%    0.1%  Stub: KeyedLoadICStub
+      9    0.1%    0.1%  Stub: BinaryOpICStub {1}
+      9    0.1%    0.1%  LazyCompile: *calculateMove /Users/max/src/codinggame/coders_strike_back/dist/pod.js:475:38
+      9    0.1%    0.1%  LazyCompile: *IncomingMessage _http_incoming.js:20:25
+      9    0.1%    0.1%  LazyCompile: $resolve /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:158:24
+      8    0.0%    0.0%  Stub: FastNewStrictArgumentsStub
+      8    0.0%    0.0%  Stub: FastNewContextStub {2}
+      8    0.0%    0.0%  LazyCompile: dispatch /Users/max/src/codinggame/coders_strike_back/node_modules/koa-router/lib/router.js:299:36
+      8    0.0%    0.0%  LazyCompile: *afterWrite _stream_writable.js:357:20
+      8    0.0%    0.0%  Handler: _list
+      7    0.0%    0.0%  Stub: StringCompareStub
+      7    0.0%    0.0%  Stub: StringAddStub_CheckNone_NotTenured
+      7    0.0%    0.0%  Stub: RegExpExecStub
+      7    0.0%    0.0%  Stub: FastNewClosureStub
+      7    0.0%    0.0%  LazyCompile: *updateCheckpoint /Users/max/src/codinggame/coders_strike_back/dist/pod.js:82:41
+      7    0.0%    0.0%  LazyCompile: *storeHeader _http_outgoing.js:303:21
+      7    0.0%    0.0%  LazyCompile: *read /Users/max/src/codinggame/coders_strike_back/dist/pod.js:52:29
+      7    0.0%    0.0%  LazyCompile: *notify /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:66:22
+      7    0.0%    0.0%  Handler: read
+      6    0.0%    0.0%  Stub: CallConstructStub
+      6    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub
+      6    0.0%    0.0%  LazyCompile: ~resOnFinish _http_server.js:496:25
+      6    0.0%    0.0%  LazyCompile: ~emit events.js:136:44
+      6    0.0%    0.0%  LazyCompile: tryOnTimeout timers.js:220:22
+      6    0.0%    0.0%  LazyCompile: *similar /Users/max/src/codinggame/coders_strike_back/dist/pod.js:504:32
+      6    0.0%    0.0%  LazyCompile: *removeListener events.js:310:28
+      6    0.0%    0.0%  LazyCompile: *map native array.js:996:18
+      6    0.0%    0.0%  LazyCompile: *checkInvalidHeaderChar _http_common.js:309:32
+      6    0.0%    0.0%  LazyCompile: *Readable.read _stream_readable.js:272:35
+      6    0.0%    0.0%  KeyedStoreIC: A keyed store IC from the snapshot
+      6    0.0%    0.0%  Handler: An IC handler from the snapshot {7}
+      6    0.0%    0.0%  Handler: An IC handler from the snapshot {4}
+      6    0.0%    0.0%  Builtin: JSConstructStubGeneric
+      5    0.0%    0.0%  Stub: ToBooleanStub
+      5    0.0%    0.0%  Stub: LoadConstantStub {7}
+      5    0.0%    0.0%  Stub: GrowArrayElementsStub
+      5    0.0%    0.0%  Stub: FastNewClosureStub {1}
+      5    0.0%    0.0%  Stub: CompareICStub {2}
+      5    0.0%    0.0%  Stub: CompareICStub {10}
+      5    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub {1}
+      5    0.0%    0.0%  Stub: BinaryOpICStub {4}
+      5    0.0%    0.0%  LazyCompile: ~findOptimalSolution /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:78:29
+      5    0.0%    0.0%  LazyCompile: ~OutgoingMessage.write _http_outgoing.js:424:43
+      5    0.0%    0.0%  LazyCompile: duplicate /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:259:28
+      5    0.0%    0.0%  LazyCompile: cors /Users/max/src/codinggame/coders_strike_back/node_modules/koa-cors/index.js:48:24
+      5    0.0%    0.0%  LazyCompile: <anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa-compose/index.js:19:20
+      5    0.0%    0.0%  LazyCompile: *test native regexp.js:153:20
+      5    0.0%    0.0%  LazyCompile: *scale /Users/max/src/codinggame/coders_strike_back/dist/vector.js:40:30
+      5    0.0%    0.0%  LazyCompile: *next /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:97:18
+      5    0.0%    0.0%  LazyCompile: *init internal/linkedlist.js:3:14
+      5    0.0%    0.0%  LazyCompile: *_addListener events.js:210:22
+      5    0.0%    0.0%  LazyCompile: *QuickSort native array.js:743:26
+      5    0.0%    0.0%  LazyCompile: *MathCosSlow native fdlibm.js:161:21
+      5    0.0%    0.0%  Handler: undefined
+      4    0.0%    0.0%  Stub: LoadFieldStub {9}
+      4    0.0%    0.0%  Stub: LoadDictionaryElementStub
+      4    0.0%    0.0%  Stub: LoadConstantStub {5}
+      4    0.0%    0.0%  Stub: FastCloneRegExpStub
+      4    0.0%    0.0%  LazyCompile: ~listener /Users/max/src/codinggame/coders_strike_back/node_modules/on-finished/index.js:161:20
+      4    0.0%    0.0%  LazyCompile: ~ServerResponse.writeHead _http_server.js:160:46
+      4    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_ctx.js:7:28
+      4    0.0%    0.0%  LazyCompile: next native generator.js:13:29
+      4    0.0%    0.0%  LazyCompile: *require.catch /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:220:22
+      4    0.0%    0.0%  LazyCompile: *isApplicable /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:279:31
+      4    0.0%    0.0%  LazyCompile: *invoke /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:233:27
+      4    0.0%    0.0%  LazyCompile: *extname path.js:1432:28
+      4    0.0%    0.0%  LazyCompile: *OutgoingMessage _http_outgoing.js:46:25
+      4    0.0%    0.0%  LazyCompile: *MathSinSlow native fdlibm.js:75:21
+      4    0.0%    0.0%  Handler: _dump
+      4    0.0%    0.0%  Handler: An IC handler from the snapshot {12}
+      3    0.0%    0.0%  Stub: ToStringStub
+      3    0.0%    0.0%  Stub: StringAddStub_ConvertRight_NotTenured
+      3    0.0%    0.0%  Stub: StoreFieldStub
+      3    0.0%    0.0%  Stub: LoadFieldStub {8}
+      3    0.0%    0.0%  Stub: LoadFieldStub {7}
+      3    0.0%    0.0%  Stub: LoadFieldStub {5}
+      3    0.0%    0.0%  Stub: LoadFieldStub {3}
+      3    0.0%    0.0%  Stub: CompareICStub {5}
+      3    0.0%    0.0%  Stub: CEntryStub {1}
+      3    0.0%    0.0%  LazyCompile: ~byteLength buffer.js:352:20
+      3    0.0%    0.0%  LazyCompile: ~_callee3$ /Users/max/src/codinggame/coders_strike_back/dist/index.js:72:51
+      3    0.0%    0.0%  LazyCompile: ~Router.match /Users/max/src/codinggame/coders_strike_back/node_modules/koa-router/lib/router.js:621:35
+      3    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:136:32
+      3    0.0%    0.0%  LazyCompile: tryCatch /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:60:20
+      3    0.0%    0.0%  LazyCompile: *respond /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:194:17
+      3    0.0%    0.0%  LazyCompile: *relativeStats /Users/max/src/codinggame/coders_strike_back/dist/pod.js:132:38
+      3    0.0%    0.0%  LazyCompile: *parserOnIncoming _http_server.js:460:28
+      3    0.0%    0.0%  LazyCompile: *parseInt native v8natives.js:36:24
+      3    0.0%    0.0%  LazyCompile: *optimalMove /Users/max/src/codinggame/coders_strike_back/dist/pod.js:251:36
+      3    0.0%    0.0%  LazyCompile: *module.exports /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_ctx.js:3:26
+      3    0.0%    0.0%  LazyCompile: *charset /Users/max/src/codinggame/coders_strike_back/node_modules/mime-types/index.js:49:17
+      3    0.0%    0.0%  LazyCompile: *apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:261:24
+      3    0.0%    0.0%  LazyCompile: *app.createContext /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:148:29
+      3    0.0%    0.0%  LazyCompile: *angle /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:334:15
+      3    0.0%    0.0%  LazyCompile: *ServerResponse.writeHead _http_server.js:160:46
+      3    0.0%    0.0%  LazyCompile: *ReadableState _stream_readable.js:36:23
+      3    0.0%    0.0%  LazyCompile: *OutgoingMessage.setHeader _http_outgoing.js:337:47
+      3    0.0%    0.0%  LazyCompile: *InnerArrayForEach native array.js:946:27
+      3    0.0%    0.0%  LazyCompile: *EventEmitter events.js:11:22
+      3    0.0%    0.0%  LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:132:18
+      3    0.0%    0.0%  Handler: toString {NaN}
+      3    0.0%    0.0%  Handler: symbol("nonexistent_symbol" hash 311741da) {1}
+      3    0.0%    0.0%  Handler: status
+      3    0.0%    0.0%  Handler: method
+      3    0.0%    0.0%  Handler: Error
+      3    0.0%    0.0%  Handler: An IC handler from the snapshot {8}
+      3    0.0%    0.0%  Handler: An IC handler from the snapshot {6}
+      3    0.0%    0.0%  Handler: An IC handler from the snapshot {10}
+      2    0.0%    0.0%  Stub: ToBooleanStub(String)
+      2    0.0%    0.0%  Stub: ToBooleanStub {1}
+      2    0.0%    0.0%  Stub: SubStringStub
+      2    0.0%    0.0%  Stub: StoreFieldStub {8}
+      2    0.0%    0.0%  Stub: StoreFieldStub {7}
+      2    0.0%    0.0%  Stub: StoreFastElementStub
+      2    0.0%    0.0%  Stub: RecordWriteStub {9}
+      2    0.0%    0.0%  Stub: RecordWriteStub {6}
+      2    0.0%    0.0%  Stub: RecordWriteStub {5}
+      2    0.0%    0.0%  Stub: RecordWriteStub
+      2    0.0%    0.0%  Stub: LoadFieldStub {6}
+      2    0.0%    0.0%  Stub: LoadFieldStub {1}
+      2    0.0%    0.0%  Stub: LoadConstantStub {6}
+      2    0.0%    0.0%  Stub: FastNewSloppyArgumentsStub
+      2    0.0%    0.0%  Stub: FastNewContextStub
+      2    0.0%    0.0%  Stub: FastNewClosureStub {2}
+      2    0.0%    0.0%  Stub: FastCloneShallowObjectStub
+      2    0.0%    0.0%  Stub: CompareICStub {8}
+      2    0.0%    0.0%  Stub: CompareICStub {11}
+      2    0.0%    0.0%  Stub: CallApiAccessorStub {2}
+      2    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub(ADD_CreateAllocationMementos:String*Generic->String)
+      2    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub(ADD_CreateAllocationMementos:Number*String->String)
+      2    0.0%    0.0%  Stub: ArraySingleArgumentConstructorStub {1}
+      2    0.0%    0.0%  RegExp: ^Trailer$
+      2    0.0%    0.0%  LazyCompile: ~stepsToPoint /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:326:22
+      2    0.0%    0.0%  LazyCompile: ~readableAddChunk _stream_readable.js:148:26
+      2    0.0%    0.0%  LazyCompile: ~onFinish /Users/max/src/codinggame/coders_strike_back/node_modules/on-finished/index.js:95:20
+      2    0.0%    0.0%  LazyCompile: ~arrayClone events.js:472:20
+      2    0.0%    0.0%  LazyCompile: onFulfilled /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:62:25
+      2    0.0%    0.0%  LazyCompile: noop /Users/max/src/codinggame/coders_strike_back/node_modules/koa-compose/index.js:38:15
+      2    0.0%    0.0%  LazyCompile: *onEofChunk _stream_readable.js:400:20
+      2    0.0%    0.0%  LazyCompile: *next native array-iterator.js:32:27
+      2    0.0%    0.0%  LazyCompile: *module.exports.turn /Users/max/src/codinggame/coders_strike_back/dist/track.js:55:32
+      2    0.0%    0.0%  LazyCompile: *module.exports.print /Users/max/src/codinggame/coders_strike_back/dist/printapi.js:18:33
+      2    0.0%    0.0%  LazyCompile: *module.exports.podStep /Users/max/src/codinggame/coders_strike_back/dist/gamecontroller.js:32:35
+      2    0.0%    0.0%  LazyCompile: *makeInvokeMethod /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:230:28
+      2    0.0%    0.0%  LazyCompile: *isThenable /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:40:26
+      2    0.0%    0.0%  LazyCompile: *exec native regexp.js:107:22
+      2    0.0%    0.0%  LazyCompile: *emitReadable_ _stream_readable.js:431:23
+      2    0.0%    0.0%  LazyCompile: *duplicateAndInit /Users/max/src/codinggame/coders_strike_back/dist/pod.js:101:41
+      2    0.0%    0.0%  LazyCompile: *distance /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:421:18
+      2    0.0%    0.0%  LazyCompile: *cleanup /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:58:19
+      2    0.0%    0.0%  LazyCompile: *abs native math.js:13:17
+      2    0.0%    0.0%  LazyCompile: *Readable.on _stream_readable.js:687:33
+      2    0.0%    0.0%  LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      2    0.0%    0.0%  Handler: writeUtf8String
+      2    0.0%    0.0%  Handler: writable {1}
+      2    0.0%    0.0%  Handler: symbol("nonexistent_symbol" hash 311741da)
+      2    0.0%    0.0%  Handler: shift
+      2    0.0%    0.0%  Handler: removeListener {1}
+      2    0.0%    0.0%  Handler: next
+      2    0.0%    0.0%  Handler: callback
+      2    0.0%    0.0%  Handler: _send
+      2    0.0%    0.0%  Handler: _events
+      2    0.0%    0.0%  Handler: Content-Length
+      2    0.0%    0.0%  Handler: Array
+      2    0.0%    0.0%  Handler: An IC handler from the snapshot {9}
+      2    0.0%    0.0%  Handler: An IC handler from the snapshot {3}
+      2    0.0%    0.0%  Handler: An IC handler from the snapshot {1}
+      2    0.0%    0.0%  Handler: An IC handler from the snapshot {15}
+      2    0.0%    0.0%  Handler: Access-Control-Allow-Methods
+      2    0.0%    0.0%  Builtin: FunctionPrototypeCall
+      1    0.0%    0.0%  Stub: ToBooleanStub(Undefined,Bool)
+      1    0.0%    0.0%  Stub: ToBooleanStub(Undefined)
+      1    0.0%    0.0%  Stub: StoreTransitionStub {7}
+      1    0.0%    0.0%  Stub: StoreTransitionStub {6}
+      1    0.0%    0.0%  Stub: StoreTransitionStub {5}
+      1    0.0%    0.0%  Stub: StoreTransitionStub {4}
+      1    0.0%    0.0%  Stub: StoreTransitionStub {3}
+      1    0.0%    0.0%  Stub: StoreTransitionStub {2}
+      1    0.0%    0.0%  Stub: StoreTransitionStub {1}
+      1    0.0%    0.0%  Stub: StoreTransitionStub
+      1    0.0%    0.0%  Stub: StoreFieldStub {6}
+      1    0.0%    0.0%  Stub: StoreFieldStub {5}
+      1    0.0%    0.0%  Stub: StoreFieldStub {4}
+      1    0.0%    0.0%  Stub: StoreFieldStub {3}
+      1    0.0%    0.0%  Stub: StoreFieldStub {2}
+      1    0.0%    0.0%  Stub: StoreFieldStub {1}
+      1    0.0%    0.0%  Stub: RecordWriteStub {8}
+      1    0.0%    0.0%  Stub: RecordWriteStub {7}
+      1    0.0%    0.0%  Stub: RecordWriteStub {4}
+      1    0.0%    0.0%  Stub: RecordWriteStub {3}
+      1    0.0%    0.0%  Stub: RecordWriteStub {2}
+      1    0.0%    0.0%  Stub: RecordWriteStub {1}
+      1    0.0%    0.0%  Stub: RecordWriteStub {10}
+      1    0.0%    0.0%  Stub: NameDictionaryLookupStub
+      1    0.0%    0.0%  Stub: LoadFieldStub {4}
+      1    0.0%    0.0%  Stub: LoadFieldStub {2}
+      1    0.0%    0.0%  Stub: LoadFieldStub {11}
+      1    0.0%    0.0%  Stub: LoadFieldStub {10}
+      1    0.0%    0.0%  Stub: LoadFieldStub
+      1    0.0%    0.0%  Stub: LoadFastElementStub
+      1    0.0%    0.0%  Stub: LoadConstantStub {8}
+      1    0.0%    0.0%  Stub: LoadConstantStub {4}
+      1    0.0%    0.0%  Stub: LoadConstantStub {3}
+      1    0.0%    0.0%  Stub: LoadConstantStub {1}
+      1    0.0%    0.0%  Stub: LoadConstantStub
+      1    0.0%    0.0%  Stub: JSEntryStub
+      1    0.0%    0.0%  Stub: FastNewContextStub {4}
+      1    0.0%    0.0%  Stub: FastNewContextStub {3}
+      1    0.0%    0.0%  Stub: CreateWeakCellStub
+      1    0.0%    0.0%  Stub: CompareNilICStub(NullValue)(Null)
+      1    0.0%    0.0%  Stub: CompareICStub {9}
+      1    0.0%    0.0%  Stub: CompareICStub {7}
+      1    0.0%    0.0%  Stub: CompareICStub {6}
+      1    0.0%    0.0%  Stub: CompareICStub {4}
+      1    0.0%    0.0%  Stub: CompareICStub {3}
+      1    0.0%    0.0%  Stub: CompareICStub {1}
+      1    0.0%    0.0%  Stub: CompareICStub
+      1    0.0%    0.0%  Stub: CallApiAccessorStub {1}
+      1    0.0%    0.0%  Stub: BinaryOpWithAllocationSiteStub(ADD_CreateAllocationMementos:String*Number->String)
+      1    0.0%    0.0%  Stub: BinaryOpICWithAllocationSiteStub(ADD_CreateAllocationMementos:String*String->String)
+      1    0.0%    0.0%  Stub: BinaryOpICStub(SUB:Generic*Number->Number)
+      1    0.0%    0.0%  Stub: BinaryOpICStub {6}
+      1    0.0%    0.0%  Stub: BinaryOpICStub {5}
+      1    0.0%    0.0%  Stub: BinaryOpICStub {2}
+      1    0.0%    0.0%  Stub: BinaryOpICStub
+      1    0.0%    0.0%  Stub: ArrayNoArgumentConstructorStub
+      1    0.0%    0.0%  Stub: ArrayConstructorStub
+      1    0.0%    0.0%  RegExp: ^text\\/
+      1    0.0%    0.0%  RegExp: ^\\s*<
+      1    0.0%    0.0%  RegExp: ^\\/init_race(?:\\/(?=$))?$
+      1    0.0%    0.0%  RegExp: ^Date$
+      1    0.0%    0.0%  RegExp: ^Content-Length$
+      1    0.0%    0.0%  RegExp: [\\r\\n]
+      1    0.0%    0.0%  LazyCompile: ~utcDate._onTimeout _http_outgoing.js:41:30
+      1    0.0%    0.0%  LazyCompile: ~tan native fdlibm.js:281:17
+      1    0.0%    0.0%  LazyCompile: ~storeHeader _http_outgoing.js:303:21
+      1    0.0%    0.0%  LazyCompile: ~slowToString buffer.js:426:22
+      1    0.0%    0.0%  LazyCompile: ~resolve path.js:1133:28
+      1    0.0%    0.0%  LazyCompile: ~removeListener events.js:310:28
+      1    0.0%    0.0%  LazyCompile: ~parseInt native v8natives.js:36:24
+      1    0.0%    0.0%  LazyCompile: ~optimalMove /Users/max/src/codinggame/coders_strike_back/dist/pod.js:251:36
+      1    0.0%    0.0%  LazyCompile: ~onevent /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:81:26
+      1    0.0%    0.0%  LazyCompile: ~onParserExecuteCommon _http_server.js:377:33
+      1    0.0%    0.0%  LazyCompile: ~next /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:97:18
+      1    0.0%    0.0%  LazyCompile: ~module.exports.shadowPodMoveToTarget /Users/max/src/codinggame/coders_strike_back/dist/track.js:126:49
+      1    0.0%    0.0%  LazyCompile: ~module.exports.podStep /Users/max/src/codinggame/coders_strike_back/dist/gamecontroller.js:32:35
+      1    0.0%    0.0%  LazyCompile: ~isApplicable /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:279:31
+      1    0.0%    0.0%  LazyCompile: ~fs.readSync fs.js:701:23
+      1    0.0%    0.0%  LazyCompile: ~exports.format util.js:71:26
+      1    0.0%    0.0%  LazyCompile: ~exec native regexp.js:107:22
+      1    0.0%    0.0%  LazyCompile: ~emitTwo events.js:104:17
+      1    0.0%    0.0%  LazyCompile: ~emitNone events.js:84:18
+      1    0.0%    0.0%  LazyCompile: ~duplicateAndInit /Users/max/src/codinggame/coders_strike_back/dist/pod.js:101:41
+      1    0.0%    0.0%  LazyCompile: ~distance /Users/max/src/codinggame/coders_strike_back/dist/point.js:41:27
+      1    0.0%    0.0%  LazyCompile: ~createWriteReq net.js:727:24
+      1    0.0%    0.0%  LazyCompile: ~collisionImpact /Users/max/src/codinggame/coders_strike_back/dist/pod.js:427:40
+      1    0.0%    0.0%  LazyCompile: ~co /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:43:12
+      1    0.0%    0.0%  LazyCompile: ~clearBuffer _stream_writable.js:376:21
+      1    0.0%    0.0%  LazyCompile: ~checkIsHttpToken _http_common.js:273:26
+      1    0.0%    0.0%  LazyCompile: ~checkInvalidHeaderChar _http_common.js:309:32
+      1    0.0%    0.0%  LazyCompile: ~charset /Users/max/src/codinggame/coders_strike_back/node_modules/mime-types/index.js:49:17
+      1    0.0%    0.0%  LazyCompile: ~body /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:128:11
+      1    0.0%    0.0%  LazyCompile: ~basename path.js:1354:30
+      1    0.0%    0.0%  LazyCompile: ~UseSparseVariant native array.js:118:26
+      1    0.0%    0.0%  LazyCompile: ~PromiseCapability /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:224:31
+      1    0.0%    0.0%  LazyCompile: ~OutgoingMessage._storeHeader _http_outgoing.js:190:50
+      1    0.0%    0.0%  LazyCompile: ~NativeModule.require bootstrap_node.js:377:34
+      1    0.0%    0.0%  LazyCompile: ~Module._resolveLookupPaths module.js:285:38
+      1    0.0%    0.0%  LazyCompile: ~Module._load module.js:383:24
+      1    0.0%    0.0%  LazyCompile: ~InnerArrayIndexOf native array.js:1011:27
+      1    0.0%    0.0%  LazyCompile: ~InnerArrayFilter native array.js:924:26
+      1    0.0%    0.0%  LazyCompile: ~GetHash native collection.js:91:17
+      1    0.0%    0.0%  LazyCompile: ~ArraySlice native array.js:579:20
+      1    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/track.js:90:29
+      1    0.0%    0.0%  LazyCompile: tryReadSync fs.js:482:21
+      1    0.0%    0.0%  LazyCompile: stringify native json.js:162:23
+      1    0.0%    0.0%  LazyCompile: Promise /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:188:30
+      1    0.0%    0.0%  LazyCompile: *writeOrBuffer _stream_writable.js:269:23
+      1    0.0%    0.0%  LazyCompile: *substr native string.js:320:22
+      1    0.0%    0.0%  LazyCompile: *status /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:79:13
+      1    0.0%    0.0%  LazyCompile: *status /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:68:13
+      1    0.0%    0.0%  LazyCompile: *sort /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.array.sort.js:18:22
+      1    0.0%    0.0%  LazyCompile: *resetTryEntry /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:399:25
+      1    0.0%    0.0%  LazyCompile: *push /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:183:23
+      1    0.0%    0.0%  LazyCompile: *path /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/request.js:119:11
+      1    0.0%    0.0%  LazyCompile: *optimalMoveAI /Users/max/src/codinggame/coders_strike_back/dist/pod.js:212:38
+      1    0.0%    0.0%  LazyCompile: *onwrite _stream_writable.js:329:17
+      1    0.0%    0.0%  LazyCompile: *ok assert.js:108:12
+      1    0.0%    0.0%  LazyCompile: *module.exports /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_a-function.js:1:88
+      1    0.0%    0.0%  LazyCompile: *howMuchToRead _stream_readable.js:246:23
+      1    0.0%    0.0%  LazyCompile: *goesOffCheckpoint1 /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:303:28
+      1    0.0%    0.0%  LazyCompile: *get native collection.js:239:16
+      1    0.0%    0.0%  LazyCompile: *first /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:24:15
+      1    0.0%    0.0%  LazyCompile: *emitNone events.js:84:18
+      1    0.0%    0.0%  LazyCompile: *compareInformedDecisionTreeNodes /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:157:51
+      1    0.0%    0.0%  LazyCompile: *charCodeAt native string.js:48:28
+      1    0.0%    0.0%  LazyCompile: *attachFinishedListener /Users/max/src/codinggame/coders_strike_back/node_modules/on-finished/index.js:90:32
+      1    0.0%    0.0%  LazyCompile: *atan2 native math.js:26:21
+      1    0.0%    0.0%  LazyCompile: *add /Users/max/src/codinggame/coders_strike_back/dist/point.js:25:22
+      1    0.0%    0.0%  LazyCompile: *acceleration$ /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:366:55
+      1    0.0%    0.0%  LazyCompile: *_toConsumableArray /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:68:28
+      1    0.0%    0.0%  LazyCompile: *_callee3 /Users/max/src/codinggame/coders_strike_back/dist/index.js:71:59
+      1    0.0%    0.0%  LazyCompile: *Stream stream.js:22:16
+      1    0.0%    0.0%  LazyCompile: *ServerResponse.detachSocket _http_server.js:144:49
+      1    0.0%    0.0%  LazyCompile: *ServerResponse _http_server.js:85:24
+      1    0.0%    0.0%  LazyCompile: *Object.defineProperty.get bootstrap_node.js:239:20
+      1    0.0%    0.0%  LazyCompile: *Module._resolveFilename module.js:426:35
+      1    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths module.js:247:37
+      1    0.0%    0.0%  LazyCompile: *InnerArraySort native array.js:699:24
+      1    0.0%    0.0%  LazyCompile: *InnerArrayFilter native array.js:924:26
+      1    0.0%    0.0%  LazyCompile: *IncomingMessage._dump _http_incoming.js:184:43
+      1    0.0%    0.0%  LazyCompile: *IncomingMessage._addHeaderLine _http_incoming.js:132:52
+      1    0.0%    0.0%  LazyCompile: *DefineIndexedProperty native array.js:48:31
+      1    0.0%    0.0%  LazyCompile: *DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      1    0.0%    0.0%  LazyCompile: *Cookies /Users/max/src/codinggame/coders_strike_back/node_modules/cookies/lib/cookies.js:16:17
+      1    0.0%    0.0%  LazyCompile: *Context.stop /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:508:19
+      1    0.0%    0.0%  LazyCompile: *Context.reset /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:485:20
+      1    0.0%    0.0%  LazyCompile: *Console.log console.js:42:33
+      1    0.0%    0.0%  LazyCompile: *Buffer.toString buffer.js:492:37
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:91:40
+      1    0.0%    0.0%  Handler: writeUtf8String {1}
+      1    0.0%    0.0%  Handler: writable
+      1    0.0%    0.0%  Handler: value
+      1    0.0%    0.0%  Handler: type
+      1    0.0%    0.0%  Handler: target
+      1    0.0%    0.0%  Handler: socket
+      1    0.0%    0.0%  Handler: res
+      1    0.0%    0.0%  Handler: removeListener
+      1    0.0%    0.0%  Handler: process
+      1    0.0%    0.0%  Handler: highWaterMark
+      1    0.0%    0.0%  Handler: handle
+      1    0.0%    0.0%  Handler: flowing
+      1    0.0%    0.0%  Handler: expandNode
+      1    0.0%    0.0%  Handler: encoding
+      1    0.0%    0.0%  Handler: domain
+      1    0.0%    0.0%  Handler: ctx
+      1    0.0%    0.0%  Handler: cork
+      1    0.0%    0.0%  Handler: completion
+      1    0.0%    0.0%  Handler: collisionImpact
+      1    0.0%    0.0%  Handler: checkpoint1Distance
+      1    0.0%    0.0%  Handler: call {1}
+      1    0.0%    0.0%  Handler: body
+      1    0.0%    0.0%  Handler: apply
+      1    0.0%    0.0%  Handler: _writeRaw
+      1    0.0%    0.0%  Handler: _storeHeader
+      1    0.0%    0.0%  Handler: _maxListeners
+      1    0.0%    0.0%  Handler: _invoke
+      1    0.0%    0.0%  Handler: _events {1}
+      1    0.0%    0.0%  Handler: _contentLength
+      1    0.0%    0.0%  Handler: Object
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {5}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {2}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {16}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {14}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {13}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {11}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot
+      1    0.0%    0.0%  Function: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/deep-equal/index.js:1:11
+      1    0.0%    0.0%  Function: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:307:38
+      1    0.0%    0.0%  Builtin: ObjectCreate
+      1    0.0%    0.0%  Builtin: JSEntryTrampoline
+      1    0.0%    0.0%  Builtin: HandleApiCallConstruct
+      1    0.0%    0.0%  Builtin: DatePrototypeToUTCString
+      1    0.0%    0.0%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+      1    0.0%    0.0%  Builtin: ArrayIsArray
+      1    0.0%    0.0%  Builtin: Apply
+
+ [C++]:
+   ticks  total  nonlib   name
+  12819   74.4%   76.6%  ___mac_get_pid
+    230    1.3%    1.4%  void node::StreamBase::JSMethod<node::StreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+    136    0.8%    0.8%  node::InitFs(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)
+     74    0.4%    0.4%  node::TimerWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     67    0.4%    0.4%  ___semctl
+     64    0.4%    0.4%  ___kdebug_trace
+     61    0.4%    0.4%  v8::internal::Builtins::~Builtins()
+     49    0.3%    0.3%  node::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     45    0.3%    0.3%  v8::internal::FindCaller(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSFunction>)
+     33    0.2%    0.2%  _guarded_close_np
+     29    0.2%    0.2%  ___fchmod
+     27    0.2%    0.2%  v8::internal::Dictionary<v8::internal::SeededNumberDictionary, v8::internal::SeededNumberDictionaryShape, unsigned int>::SlowReverseLookup(v8::internal::Object*)
+     27    0.2%    0.2%  _malloc_zone_malloc
+     27    0.2%    0.2%  ___shm_open
+     25    0.1%    0.1%  v8::internal::Runtime_ParseJson(int, v8::internal::Object**, v8::internal::Isolate*)
+     21    0.1%    0.1%  v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+     19    0.1%    0.1%  v8::Context::Enter()
+     19    0.1%    0.1%  _uv_get_process_title
+     18    0.1%    0.1%  _http_parser_execute
+     15    0.1%    0.1%  v8::internal::LookupIterator::Next()
+     15    0.1%    0.1%  v8::internal::IncrementalMarking::UpdateMarkingDequeAfterScavenge()
+     14    0.1%    0.1%  v8::internal::Factory::NewFunction(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Handle<v8::internal::Context>, v8::internal::PretenureFlag)
+     14    0.1%    0.1%  v8::internal::ApiNatives::InstantiateObject(v8::internal::Handle<v8::internal::ObjectTemplateInfo>)
+     14    0.1%    0.1%  v8::Object::Get(v8::Local<v8::Context>, unsigned int)
+     13    0.1%    0.1%  v8::internal::StaticMarkingVisitor<v8::internal::IncrementalMarkingMarkingVisitor>::VisitJSFunction(v8::internal::Map*, v8::internal::HeapObject*)
+     13    0.1%    0.1%  node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+     12    0.1%    0.1%  v8::internal::TransitionArray::Allocate(v8::internal::Isolate*, int, int)
+     12    0.1%    0.1%  v8::internal::Factory::NewStringFromOneByte(v8::internal::Vector<unsigned char const>, v8::internal::PretenureFlag)
+     12    0.1%    0.1%  _vfprintf_l
+     11    0.1%    0.1%  v8::internal::Runtime_GetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     11    0.1%    0.1%  v8::internal::JSObject::AddDataElement(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow)
+     11    0.1%    0.1%  v8::internal::Heap::InitializeJSObjectBody(v8::internal::JSObject*, v8::internal::Map*, int)
+     11    0.1%    0.1%  v8::internal::Heap::AllocateRawOneByteString(int, v8::internal::PretenureFlag)
+     11    0.1%    0.1%  v8::internal::FastDtoa(double, v8::internal::FastDtoaMode, int, v8::internal::Vector<char>, int*, int*)
+     11    0.1%    0.1%  v8::Object::Get(unsigned int)
+     10    0.1%    0.1%  void v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::ObjectEvacuationStrategy<(v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::ObjectContents)1>::VisitSpecialized<40>(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::HeapObject*)
+     10    0.1%    0.1%  v8::internal::ObjectHashTable::Lookup(v8::internal::Handle<v8::internal::Object>)
+     10    0.1%    0.1%  v8::internal::Object::CreateListFromArrayLike(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::ElementTypes)
+     10    0.1%    0.1%  _renameat
+      9    0.1%    0.1%  v8::internal::StringTable::LookupString(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>)
+      9    0.1%    0.1%  v8::internal::RuntimeCallTimerScope::RuntimeCallTimerScope(v8::internal::Isolate*, v8::internal::RuntimeCallCounter*)
+      9    0.1%    0.1%  v8::internal::Execution::Call(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)
+      9    0.1%    0.1%  v8::Function::Call(v8::Local<v8::Context>, v8::Local<v8::Value>, int, v8::Local<v8::Value>*)
+      9    0.1%    0.1%  node::SetIdle(uv_prepare_s*)
+      9    0.1%    0.1%  _uv_run
+      9    0.1%    0.1%  _llroundf$fenv_access_off
+      8    0.0%    0.0%  v8::internal::StubCache::Initialize()
+      8    0.0%    0.0%  v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+      8    0.0%    0.0%  v8::internal::HeapSnapshotJSONSerializer::StringsMatch(void*, void*)
+      8    0.0%    0.0%  v8::internal::Heap::AllocateEmptyFixedTypedArray(v8::internal::ExternalArrayType)
+      8    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::StaticScavengeVisitor, v8::internal::FlexibleBodyDescriptor<8>, int>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+      8    0.0%    0.0%  v8::internal::Factory::NewFunctionFromSharedFunctionInfo(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Handle<v8::internal::Context>, v8::internal::PretenureFlag)
+      8    0.0%    0.0%  v8::internal::Dictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape, v8::internal::Handle<v8::internal::Name> >::Add(v8::internal::Handle<v8::internal::NameDictionary>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDetails)
+      8    0.0%    0.0%  v8::internal::ApiNatives::InstantiateFunction(v8::internal::Handle<v8::internal::FunctionTemplateInfo>)
+      8    0.0%    0.0%  node::TimerWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.0%    0.0%  node::StreamWrap::OnAlloc(uv_handle_s*, unsigned long, uv_buf_t*)
+      8    0.0%    0.0%  _mig_strncpy
+      7    0.0%    0.0%  v8::internal::Scanner::Scan()
+      7    0.0%    0.0%  v8::internal::Heap::InitializeJSObjectFromMap(v8::internal::JSObject*, v8::internal::FixedArray*, v8::internal::Map*)
+      7    0.0%    0.0%  v8::internal::HandleScope::NumberOfHandles(v8::internal::Isolate*)
+      7    0.0%    0.0%  v8::internal::Builtins::MakeSexagenarianCodeYoungAgainEvenMarking()
+      7    0.0%    0.0%  node::StartProfilerIdleNotifier(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.0%    0.0%  node::Buffer::Utf8Slice(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.0%    0.0%  v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObject**, v8::internal::HeapObject*)
+      6    0.0%    0.0%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      6    0.0%    0.0%  v8::internal::Object::SetDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>)
+      6    0.0%    0.0%  v8::internal::Object* v8::internal::VisitWeakList<v8::internal::Context>(v8::internal::Heap*, v8::internal::Object*, v8::internal::WeakObjectRetainer*)
+      6    0.0%    0.0%  v8::internal::Map::AsElementsKind(v8::internal::Handle<v8::internal::Map>, v8::internal::ElementsKind)
+      6    0.0%    0.0%  v8::internal::JSObject::GetPropertyAttributesWithFailedAccessCheck(v8::internal::LookupIterator*)
+      6    0.0%    0.0%  v8::internal::Factory::NewSharedFunctionInfo(v8::internal::Handle<v8::internal::String>, int, v8::internal::FunctionKind, v8::internal::Handle<v8::internal::Code>, v8::internal::Handle<v8::internal::ScopeInfo>, v8::internal::Handle<v8::internal::TypeFeedbackVector>)
+      6    0.0%    0.0%  v8::Value::IsFunction() const
+      6    0.0%    0.0%  v8::HandleScope::Initialize(v8::Isolate*)
+      6    0.0%    0.0%  _sys_icache_invalidate
+      6    0.0%    0.0%  _swscanf
+      6    0.0%    0.0%  __spin_unlock
+      6    0.0%    0.0%  __platform_bzero
+      5    0.0%    0.0%  v8::internal::String::CalculateLineEnds(v8::internal::Handle<v8::internal::String>, bool)
+      5    0.0%    0.0%  v8::internal::OptimizedFrame::StackSlotAt(int) const
+      5    0.0%    0.0%  v8::internal::Object::SetPropertyInternal(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::LanguageMode, v8::internal::Object::StoreFromKeyed, bool*)
+      5    0.0%    0.0%  v8::internal::LoadIC::CompileHandler(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::CacheHolderFlag)
+      5    0.0%    0.0%  v8::internal::Isolate::SetCaptureStackTraceForUncaughtExceptions(bool, int, v8::StackTrace::StackTraceOptions)
+      5    0.0%    0.0%  v8::internal::Heap::DoScavenge(v8::internal::ObjectVisitor*, unsigned char*)
+      5    0.0%    0.0%  v8::internal::Dictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape, v8::internal::Handle<v8::internal::Name> >::GenerateNewEnumerationIndices(v8::internal::Handle<v8::internal::NameDictionary>)
+      5    0.0%    0.0%  v8::internal::Builtins::InvokeApiFunction(v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Handle<v8::internal::Object>*)
+      5    0.0%    0.0%  v8::Isolate::GetCurrentContext()
+      5    0.0%    0.0%  node::TimerWrap::OnTimeout(uv_timer_s*)
+      5    0.0%    0.0%  node::CreateEnvironment(v8::Isolate*, uv_loop_s*, v8::Local<v8::Context>, int, char const* const*, int, char const* const*)
+      5    0.0%    0.0%  _create_scalable_zone
+      5    0.0%    0.0%  ___cxa_demangle
+      4    0.0%    0.0%  v8::internal::Serializer::Pad()
+      4    0.0%    0.0%  v8::internal::Runtime_StringToLowerCase(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.0%    0.0%  v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.0%    0.0%  v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.0%    0.0%  v8::internal::RuntimeCallTimerScope::~RuntimeCallTimerScope()
+      4    0.0%    0.0%  v8::internal::Object::GetPropertyWithAccessor(v8::internal::LookupIterator*)
+      4    0.0%    0.0%  v8::internal::Map::WeakCellForMap(v8::internal::Handle<v8::internal::Map>)
+      4    0.0%    0.0%  v8::internal::Map::CopyForPreventExtensions(v8::internal::Handle<v8::internal::Map>, v8::internal::PropertyAttributes, v8::internal::Handle<v8::internal::Symbol>, char const*)
+      4    0.0%    0.0%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, bool*, v8::internal::LookupIterator::Configuration)
+      4    0.0%    0.0%  v8::internal::LookupIterator::GetStoreTarget() const
+      4    0.0%    0.0%  v8::internal::LookupIterator::GetRootForNonJSReceiver(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, unsigned int)
+      4    0.0%    0.0%  v8::internal::KeyedStoreICNexus::StateFromFeedback() const
+      4    0.0%    0.0%  v8::internal::Isolate::get_initial_js_array_map(v8::internal::ElementsKind, v8::internal::Strength)
+      4    0.0%    0.0%  v8::internal::Heap::CopyFixedArrayUpTo(v8::internal::FixedArray*, int, v8::internal::PretenureFlag)
+      4    0.0%    0.0%  v8::internal::HashTable<v8::internal::SeededNumberDictionary, v8::internal::SeededNumberDictionaryShape, unsigned int>::FindEntry(unsigned int)
+      4    0.0%    0.0%  v8::internal::HValue::SetOperandAt(int, v8::internal::HValue*)
+      4    0.0%    0.0%  v8::internal::FunctionCallbackArguments::Call(void (*)(v8::FunctionCallbackInfo<v8::Value> const&))
+      4    0.0%    0.0%  v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, int, int, v8::internal::Strength, v8::internal::ArrayStorageAllocationMode, v8::internal::PretenureFlag)
+      4    0.0%    0.0%  v8::internal::BackEdgeTable::AddStackCheck(v8::internal::Handle<v8::internal::Code>, unsigned int)
+      4    0.0%    0.0%  v8::Locker::IsLocked(v8::Isolate*)
+      4    0.0%    0.0%  v8::HandleScope::HandleScope(v8::Isolate*)
+      4    0.0%    0.0%  _uv_listen
+      3    0.0%    0.0%  v8::platform::DefaultPlatform::PumpMessageLoop(v8::Isolate*)
+      3    0.0%    0.0%  v8::internal::TransitionArray::SetPrototypeTransitions(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::FixedArray>)
+      3    0.0%    0.0%  v8::internal::String::IsOneByteEqualTo(v8::internal::Vector<unsigned char const>)
+      3    0.0%    0.0%  v8::internal::String::GetFlatContent()
+      3    0.0%    0.0%  v8::internal::StackFrameIterator::StackFrameIterator(v8::internal::Isolate*)
+      3    0.0%    0.0%  v8::internal::Scope::Scope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType, v8::internal::AstValueFactory*, v8::internal::FunctionKind)
+      3    0.0%    0.0%  v8::internal::PowersOfTenCache::GetCachedPowerForBinaryExponentRange(int, int, v8::internal::DiyFp*, int*)
+      3    0.0%    0.0%  v8::internal::ObjectHashTable::Remove(v8::internal::Handle<v8::internal::ObjectHashTable>, v8::internal::Handle<v8::internal::Object>, bool*)
+      3    0.0%    0.0%  v8::internal::Object::ToName(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      3    0.0%    0.0%  v8::internal::Map::CopyForObserved(v8::internal::Handle<v8::internal::Map>)
+      3    0.0%    0.0%  v8::internal::LayoutDescriptor::EnsureCapacity(v8::internal::Isolate*, v8::internal::Handle<v8::internal::LayoutDescriptor>, int)
+      3    0.0%    0.0%  v8::internal::LCodeGenBase::GenerateBody()
+      3    0.0%    0.0%  v8::internal::IsSpecialIndex(v8::internal::UnicodeCache*, v8::internal::String*)
+      3    0.0%    0.0%  v8::internal::HEnvironment::HEnvironment(v8::internal::Zone*, int)
+      3    0.0%    0.0%  v8::internal::Factory::NewInternalizedStringImpl(v8::internal::Handle<v8::internal::String>, int, unsigned int)
+      3    0.0%    0.0%  v8::internal::Factory::NewAllocationSite()
+      3    0.0%    0.0%  v8::internal::Factory::CopyFixedDoubleArray(v8::internal::Handle<v8::internal::FixedDoubleArray>)
+      3    0.0%    0.0%  v8::internal::BasicJsonStringifier::ApplyToJsonFunction(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      3    0.0%    0.0%  v8::Isolate::GetCpuProfiler()
+      3    0.0%    0.0%  _pathconf
+      3    0.0%    0.0%  ___inline_signbitl
+      2    0.0%    0.0%  void v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::ObjectEvacuationStrategy<(v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::ObjectContents)0>::VisitSpecialized<16>(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::HeapObject*)
+      2    0.0%    0.0%  void v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)0, (v8::internal::LoggingAndProfiling)0>::ObjectEvacuationStrategy<(v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)0, (v8::internal::LoggingAndProfiling)0>::ObjectContents)1>::VisitSpecialized<40>(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::HeapObject*)
+      2    0.0%    0.0%  v8::internal::WeakHashTable::Lookup(v8::internal::Handle<v8::internal::HeapObject>)
+      2    0.0%    0.0%  v8::internal::TimerEventScope<v8::internal::TimerEventExecute>::LogTimerEvent(v8::internal::Logger::StartEnd)
+      2    0.0%    0.0%  v8::internal::StackFrame::GetCallerState(v8::internal::StackFrame::State*) const
+      2    0.0%    0.0%  v8::internal::SeededNumberDictionary::AddNumberEntry(v8::internal::Handle<v8::internal::SeededNumberDictionary>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDetails, bool)
+      2    0.0%    0.0%  v8::internal::Scope::ReplaceOuterScope(v8::internal::Scope*)
+      2    0.0%    0.0%  v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::EvacuateFixedArray(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::HeapObject*)
+      2    0.0%    0.0%  v8::internal::Scanner::ScanDecimalDigits()
+      2    0.0%    0.0%  v8::internal::SaveContext::SaveContext(v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Runtime_KeyedStoreIC_Slow(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.0%    0.0%  v8::internal::Runtime::GetObjectProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      2    0.0%    0.0%  v8::internal::RelocInfoWriter::Write(v8::internal::RelocInfo const*)
+      2    0.0%    0.0%  v8::internal::RegExpImpl::IrregexpExec(v8::internal::Handle<v8::internal::JSRegExp>, v8::internal::Handle<v8::internal::String>, int, v8::internal::Handle<v8::internal::JSArray>)
+      2    0.0%    0.0%  v8::internal::RegExpImpl::IrregexpByteCode(v8::internal::FixedArray*, bool)
+      2    0.0%    0.0%  v8::internal::PropertyCell::InvalidateEntry(v8::internal::Handle<v8::internal::GlobalDictionary>, int)
+      2    0.0%    0.0%  v8::internal::PropertyCallbackArguments::Call(void (*)(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&), v8::Local<v8::Name>)
+      2    0.0%    0.0%  v8::internal::PerIsolateAssertScope<(v8::internal::PerIsolateAssertType)0, true>::~PerIsolateAssertScope()
+      2    0.0%    0.0%  v8::internal::Object::ToString(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>)
+      2    0.0%    0.0%  v8::internal::Object::BitwiseXor(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      2    0.0%    0.0%  v8::internal::MarkCompactCollector::RecordMigratedCodeObjectSlot(unsigned char*, v8::internal::SlotsBuffer**)
+      2    0.0%    0.0%  v8::internal::MarkCompactCollector::EvictPopularEvacuationCandidate(v8::internal::Page*)
+      2    0.0%    0.0%  v8::internal::LookupIterator::PrepareTransitionToDataProperty(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::StoreFromKeyed)
+      2    0.0%    0.0%  v8::internal::LookupIterator::Delete()
+      2    0.0%    0.0%  v8::internal::LCodeGenBase::DefineDeoptimizationLiteral(v8::internal::Handle<v8::internal::Object>)
+      2    0.0%    0.0%  v8::internal::LCodeGen::RegisterEnvironmentForDeoptimization(v8::internal::LEnvironment*, v8::internal::Safepoint::DeoptMode)
+      2    0.0%    0.0%  v8::internal::LCodeGen::DeoptimizeIf(v8::internal::Condition, v8::internal::LInstruction*, v8::internal::Deoptimizer::DeoptReason, v8::internal::Deoptimizer::BailoutType)
+      2    0.0%    0.0%  v8::internal::LChunk::MarkEmptyBlocks()
+      2    0.0%    0.0%  v8::internal::JavaScriptFrameIterator::Advance()
+      2    0.0%    0.0%  v8::internal::JSObject::SetOwnElementIgnoreAttributes(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes)
+      2    0.0%    0.0%  v8::internal::JSObject::NormalizeProperties(v8::internal::Handle<v8::internal::JSObject>, v8::internal::PropertyNormalizationMode, int, char const*)
+      2    0.0%    0.0%  v8::internal::JSFunction::GetDerivedMap(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::JSReceiver>)
+      2    0.0%    0.0%  v8::internal::IteratingStringHasher::VisitConsString(v8::internal::ConsString*)
+      2    0.0%    0.0%  v8::internal::IsMoreGeneralElementsKindTransition(v8::internal::ElementsKind, v8::internal::ElementsKind)
+      2    0.0%    0.0%  v8::internal::InvokeFunctionCallback(v8::FunctionCallbackInfo<v8::Value> const&, void (*)(v8::FunctionCallbackInfo<v8::Value> const&))
+      2    0.0%    0.0%  v8::internal::InnerPointerToCodeCache::GetCacheEntry(unsigned char*)
+      2    0.0%    0.0%  v8::internal::IC::IC(v8::internal::IC::FrameDepth, v8::internal::Isolate*, v8::internal::FeedbackNexus*)
+      2    0.0%    0.0%  v8::internal::Heap::LeftTrimFixedArray(v8::internal::FixedArrayBase*, int)
+      2    0.0%    0.0%  v8::internal::Heap::IdleNotification(int)
+      2    0.0%    0.0%  v8::internal::HInstruction::InsertBefore(v8::internal::HInstruction*)
+      2    0.0%    0.0%  v8::internal::Factory::NewRawOneByteString(int, v8::internal::PretenureFlag)
+      2    0.0%    0.0%  v8::internal::Factory::NewHeapNumber(double, v8::internal::MutableMode, v8::internal::PretenureFlag)
+      2    0.0%    0.0%  v8::internal::Factory::NewFunctionPrototype(v8::internal::Handle<v8::internal::JSFunction>)
+      2    0.0%    0.0%  v8::internal::Factory::NewFixedArray(int, v8::internal::PretenureFlag)
+      2    0.0%    0.0%  v8::internal::DoubleToCString(double, v8::internal::Vector<char>)
+      2    0.0%    0.0%  v8::internal::DiyFp::Multiply(v8::internal::DiyFp const&)
+      2    0.0%    0.0%  v8::internal::Dictionary<v8::internal::UnseededNumberDictionary, v8::internal::UnseededNumberDictionaryShape, unsigned int>::Add(v8::internal::Handle<v8::internal::UnseededNumberDictionary>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDetails)
+      2    0.0%    0.0%  v8::internal::Deserializer::DeserializePartial(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSGlobalProxy>)
+      2    0.0%    0.0%  v8::internal::Context::AddOptimizedFunction(v8::internal::JSFunction*)
+      2    0.0%    0.0%  v8::internal::Compiler::GetOptimizedCode(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Compiler::ConcurrencyMode, v8::internal::BailoutId, v8::internal::JavaScriptFrame*)
+      2    0.0%    0.0%  v8::internal::CodeStubGraphBuilderBase::BuildGraph()
+      2    0.0%    0.0%  v8::internal::BasicJsonStringifier::SerializeSmi(v8::internal::Smi*)
+      2    0.0%    0.0%  v8::internal::AstTyper::VisitYield(v8::internal::Yield*)
+      2    0.0%    0.0%  v8::internal::AstNumberingVisitor::VisitAssignment(v8::internal::Assignment*)
+      2    0.0%    0.0%  v8::internal::Assembler::emit_operand(int, v8::internal::Operand const&)
+      2    0.0%    0.0%  v8::Value::IsBoolean() const
+      2    0.0%    0.0%  v8::EscapableHandleScope::EscapableHandleScope(v8::Isolate*)
+      2    0.0%    0.0%  node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::HandleWrap::~HandleWrap()
+      2    0.0%    0.0%  _uv_timer_start
+      2    0.0%    0.0%  _uv_timer_again
+      2    0.0%    0.0%  _ures_resetIterator_57
+      2    0.0%    0.0%  _pthread_atfork
+      2    0.0%    0.0%  _freopen
+      2    0.0%    0.0%  _fputws_l
+      1    0.0%    0.0%  v8::internal::lazily_initialize_fast_sqrt(v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::compiler::LiveRangeBuilder::NewUsePosition(v8::internal::compiler::LifetimePosition, v8::internal::compiler::InstructionOperand*, void*, v8::internal::compiler::UsePositionHintType)
+      1    0.0%    0.0%  v8::internal::compiler::GraphReducer::Push(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::TypeFeedbackOracle::CountReceiverTypes(v8::internal::FeedbackVectorSlot, v8::internal::SmallMapList*)
+      1    0.0%    0.0%  v8::internal::Translation::StoreDoubleStackSlot(int)
+      1    0.0%    0.0%  v8::internal::Trace::RestoreAffectedRegisters(v8::internal::RegExpMacroAssembler*, int, v8::internal::OutSet const&, v8::internal::OutSet const&)
+      1    0.0%    0.0%  v8::internal::TemplateHashMapImpl<v8::internal::FreeStoreAllocationPolicy>::PointersMatch(void*, void*)
+      1    0.0%    0.0%  v8::internal::StringCharLoadGenerator::Generate(v8::internal::MacroAssembler*, v8::internal::Register, v8::internal::Register, v8::internal::Register, v8::internal::Label*)
+      1    0.0%    0.0%  v8::internal::SlotsBufferAllocator::DeallocateChain(v8::internal::SlotsBuffer**)
+      1    0.0%    0.0%  v8::internal::SemiSpace::GrowTo(int)
+      1    0.0%    0.0%  v8::internal::Scope::HasTrivialOuterContext() const
+      1    0.0%    0.0%  v8::internal::Scope::DeserializeScopeChain(v8::internal::Isolate*, v8::internal::Zone*, v8::internal::Context*, v8::internal::Scope*)
+      1    0.0%    0.0%  v8::internal::Scope::AllowsLazyCompilationWithoutContext() const
+      1    0.0%    0.0%  v8::internal::Scavenger::ScavengeObjectSlow(v8::internal::HeapObject**, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::ScavengeVisitor::VisitPointer(v8::internal::Object**)
+      1    0.0%    0.0%  v8::internal::Scanner::ScanString()
+      1    0.0%    0.0%  v8::internal::SaveContext::~SaveContext()
+      1    0.0%    0.0%  v8::internal::SafepointTableBuilder::DefineSafepoint(v8::internal::Assembler*, v8::internal::Safepoint::Kind, int, v8::internal::Safepoint::DeoptMode)
+      1    0.0%    0.0%  v8::internal::Runtime_ThrowDerivedConstructorReturnedNonObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_SuspendJSGeneratorObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_StoreCallbackProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_RoundNumber(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_ResumeJSGeneratorObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_MathAtan2(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Runtime_GeneratorClose(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::RuntimeProfiler::AttemptOnStackReplacement(v8::internal::JSFunction*, int)
+      1    0.0%    0.0%  v8::internal::RelocIterator::next()
+      1    0.0%    0.0%  v8::internal::RelocInfoWriter::FlushPosition()
+      1    0.0%    0.0%  v8::internal::ParserTraits::ExpressionFromLiteral(v8::internal::Token::Value, int, v8::internal::Scanner*, v8::internal::AstNodeFactory*)
+      1    0.0%    0.0%  v8::internal::Parser::ParseStatementListItem(bool*)
+      1    0.0%    0.0%  v8::internal::Parser::ParseStatementList(v8::internal::ZoneList<v8::internal::Statement*>*, int, bool*)
+      1    0.0%    0.0%  v8::internal::OrderedHashTable<v8::internal::OrderedHashMap, v8::internal::JSMapIterator, 2>::EnsureGrowable(v8::internal::Handle<v8::internal::OrderedHashMap>)
+      1    0.0%    0.0%  v8::internal::Operand::Operand(v8::internal::Register, int)
+      1    0.0%    0.0%  v8::internal::NormalizedMapCache::New(v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::NewSpace::UpdateAllocationInfo()
+      1    0.0%    0.0%  v8::internal::NativeRegExpMacroAssembler::Match(v8::internal::Handle<v8::internal::Code>, v8::internal::Handle<v8::internal::String>, int*, int, int, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::MemoryAllocator::PreFreeMemory(v8::internal::MemoryChunk*)
+      1    0.0%    0.0%  v8::internal::MarkCompactMarkingVisitor::VisitRegExpAndFlushCode(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::ClearSimpleMapTransition(v8::internal::Map*, v8::internal::Map*)
+      1    0.0%    0.0%  v8::internal::MacroAssembler::CompareMap(v8::internal::Register, v8::internal::Handle<v8::internal::Map>)
+      1    0.0%    0.0%  v8::internal::LookupIterator::ReconfigureDataProperty(v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes)
+      1    0.0%    0.0%  v8::internal::LookupIterator::HolderIsInContextIndex(unsigned int) const
+      1    0.0%    0.0%  v8::internal::Logger::CodeLinePosInfoAddStatementPositionEvent(void*, int, int)
+      1    0.0%    0.0%  v8::internal::Log::MessageBuilder::Append(char const*, ...)
+      1    0.0%    0.0%  v8::internal::LoadICNexus::ConfigureMonomorphic(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Code>)
+      1    0.0%    0.0%  v8::internal::LoadIC::megamorphic_stub()
+      1    0.0%    0.0%  v8::internal::LoadIC::UpdateCaches(v8::internal::LookupIterator*)
+      1    0.0%    0.0%  v8::internal::LParallelMove::IsRedundant() const
+      1    0.0%    0.0%  v8::internal::LGapResolver::Resolve(v8::internal::LParallelMove*)
+      1    0.0%    0.0%  v8::internal::LGapResolver::BuildInitialMoveList(v8::internal::LParallelMove*)
+      1    0.0%    0.0%  v8::internal::LCodeGenBase::CheckEnvironmentUsage()
+      1    0.0%    0.0%  v8::internal::LCodeGen::DoInnerAllocatedObject(v8::internal::LInnerAllocatedObject*)
+      1    0.0%    0.0%  v8::internal::LCodeGen::AddToTranslation(v8::internal::LEnvironment*, v8::internal::Translation*, v8::internal::LOperand*, bool, bool, int*, int*)
+      1    0.0%    0.0%  v8::internal::JSReceiver::IsSimpleEnum()
+      1    0.0%    0.0%  v8::internal::JSReceiver::HasInPrototypeChain(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  v8::internal::JSReceiver::GetOwnPropertyDescriptor(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDescriptor*)
+      1    0.0%    0.0%  v8::internal::JSObject::GetEnumPropertyKeys(v8::internal::Handle<v8::internal::JSObject>)
+      1    0.0%    0.0%  v8::internal::JSObject::DeepCopyApiBoilerplate(v8::internal::Handle<v8::internal::JSObject>)
+      1    0.0%    0.0%  v8::internal::JSObject::AddSlowProperty(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes)
+      1    0.0%    0.0%  v8::internal::JSFunction::SetInitialMap(v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  v8::internal::Isolate::IsArraySpeciesLookupChainIntact()
+      1    0.0%    0.0%  v8::internal::IntToCString(int, v8::internal::Vector<char>)
+      1    0.0%    0.0%  v8::internal::IncrementalMarking::RecordWriteSlow(v8::internal::HeapObject*, v8::internal::Object**, v8::internal::Object*)
+      1    0.0%    0.0%  v8::internal::IC::OnTypeFeedbackChanged(v8::internal::Isolate*, unsigned char*, v8::internal::InlineCacheState, v8::internal::InlineCacheState, bool)
+      1    0.0%    0.0%  v8::internal::IC::ConfigureVectorState(v8::internal::Handle<v8::internal::Name>, v8::internal::List<v8::internal::Handle<v8::internal::Map>, v8::internal::FreeStoreAllocationPolicy>*, v8::internal::List<v8::internal::Handle<v8::internal::Code>, v8::internal::FreeStoreAllocationPolicy>*)
+      1    0.0%    0.0%  v8::internal::Histogram::AddSample(int)
+      1    0.0%    0.0%  v8::internal::Heap::Scavenge()
+      1    0.0%    0.0%  v8::internal::Heap::MarkCompactPrologue()
+      1    0.0%    0.0%  v8::internal::Heap::GarbageCollectionPrologue()
+      1    0.0%    0.0%  v8::internal::Heap::DeoptMarkedAllocationSites()
+      1    0.0%    0.0%  v8::internal::Heap::CopyFixedArrayAndGrow(v8::internal::FixedArray*, int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  v8::internal::Heap::CanMoveObjectStart(v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::Heap::AllocateUninitializedFixedDoubleArray(int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  v8::internal::Heap::AllocateEmptyFixedArray()
+      1    0.0%    0.0%  v8::internal::Heap::AllocateCell(v8::internal::Object*)
+      1    0.0%    0.0%  v8::internal::HasEnumerableElements(v8::internal::JSObject*)
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::Iterate(v8::internal::ObjectVisitor*, char*)
+      1    0.0%    0.0%  v8::internal::HOptimizedGraphBuilder::VisitArithmeticExpression(v8::internal::BinaryOperation*)
+      1    0.0%    0.0%  v8::internal::HOptimizedGraphBuilder::TryInlineApiCall(v8::internal::Handle<v8::internal::Object>, v8::internal::HValue*, v8::internal::SmallMapList*, int, v8::internal::BailoutId, v8::internal::HOptimizedGraphBuilder::ApiCallType)
+      1    0.0%    0.0%  v8::internal::HOptimizedGraphBuilder::PushLoad(v8::internal::Property*, v8::internal::HValue*, v8::internal::HValue*)
+      1    0.0%    0.0%  v8::internal::HOptimizedGraphBuilder::BuildMonomorphicAccess(v8::internal::HOptimizedGraphBuilder::PropertyAccessInfo*, v8::internal::HValue*, v8::internal::HValue*, v8::internal::HValue*, v8::internal::BailoutId, v8::internal::BailoutId, bool)
+      1    0.0%    0.0%  v8::internal::HOptimizedGraphBuilder::BuildLoadNamedField(v8::internal::HOptimizedGraphBuilder::PropertyAccessInfo*, v8::internal::HValue*)
+      1    0.0%    0.0%  v8::internal::HDehoistIndexComputationsPhase::Run()
+      1    0.0%    0.0%  v8::internal::HCheckEliminationPhase::Run()
+      1    0.0%    0.0%  v8::internal::HBasicBlock::RegisterPredecessor(v8::internal::HBasicBlock*)
+      1    0.0%    0.0%  v8::internal::HBasicBlock::CreateSimulate(v8::internal::BailoutId, v8::internal::RemovableSimulate)
+      1    0.0%    0.0%  v8::internal::GCTracer::Scope::~Scope()
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::StackValueContext::Plug(v8::internal::Variable*) const
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::EmitBackEdgeBookkeeping(v8::internal::IterationStatement*, v8::internal::Label*)
+      1    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::StaticScavengeVisitor, v8::internal::FlexibleBodyDescriptor<16>, int>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::MarkCompactMarkingVisitor, v8::internal::FlexibleBodyDescriptor<16>, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::FlatStringReader::FlatStringReader(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>)
+      1    0.0%    0.0%  v8::internal::FieldType::IsClass()
+      1    0.0%    0.0%  v8::internal::FeedbackNexus::ExtractMaps(v8::internal::List<v8::internal::Handle<v8::internal::Map>, v8::internal::FreeStoreAllocationPolicy>*) const
+      1    0.0%    0.0%  v8::internal::Factory::NewProperSubString(v8::internal::Handle<v8::internal::String>, int, int)
+      1    0.0%    0.0%  v8::internal::Factory::NewFixedArrayWithHoles(int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  v8::internal::Factory::LookupSingleCharacterStringFromCode(unsigned int)
+      1    0.0%    0.0%  v8::internal::DoubleToAscii(double, v8::internal::DtoaMode, int, v8::internal::Vector<char>, int*, int*, int*)
+      1    0.0%    0.0%  v8::internal::DependentCode::Insert(v8::internal::Handle<v8::internal::DependentCode>, v8::internal::DependentCode::DependencyGroup, v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  v8::internal::Deoptimizer::GetDeoptimizationEntry(v8::internal::Isolate*, int, v8::internal::Deoptimizer::BailoutType, v8::internal::Deoptimizer::GetEntryMode)
+      1    0.0%    0.0%  v8::internal::ConsStringIterator::NextLeaf(bool*)
+      1    0.0%    0.0%  v8::internal::CompilationPhase::ShouldProduceTraceOutput() const
+      1    0.0%    0.0%  v8::internal::CodeStub::FindCodeInCache(v8::internal::Code**)
+      1    0.0%    0.0%  v8::internal::CodePatcher::CodePatcher(v8::internal::Isolate*, unsigned char*, int)
+      1    0.0%    0.0%  v8::internal::CodeGenerator::MakeCodePrologue(v8::internal::CompilationInfo*, char const*)
+      1    0.0%    0.0%  v8::internal::CodeCache::Update(v8::internal::Handle<v8::internal::CodeCache>, v8::internal::Handle<v8::internal::Name>, v8::internal::Handle<v8::internal::Code>)
+      1    0.0%    0.0%  v8::internal::Code::Relocate(long)
+      1    0.0%    0.0%  v8::internal::BitVector::Iterator::Advance()
+      1    0.0%    0.0%  v8::internal::BinaryOpIC::Transition(v8::internal::Handle<v8::internal::AllocationSite>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  v8::internal::BignumDtoa(double, v8::internal::BignumDtoaMode, int, v8::internal::Vector<char>, int*, int*)
+      1    0.0%    0.0%  v8::internal::AstValueFactory::Internalize(v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  v8::internal::AstTyper::VisitNativeFunctionLiteral(v8::internal::NativeFunctionLiteral*)
+      1    0.0%    0.0%  v8::internal::AstTyper::VisitLiteral(v8::internal::Literal*)
+      1    0.0%    0.0%  v8::internal::AstRawString::AsArrayIndex(unsigned int*) const
+      1    0.0%    0.0%  v8::internal::AssemblerBase::FlushICache(v8::internal::Isolate*, void*, unsigned long)
+      1    0.0%    0.0%  v8::internal::Assembler::jmp(v8::internal::Label*, v8::internal::Label::Distance)
+      1    0.0%    0.0%  v8::internal::Assembler::immediate_arithmetic_op(unsigned char, v8::internal::Register, v8::internal::Immediate, int)
+      1    0.0%    0.0%  v8::internal::Assembler::call(v8::internal::Handle<v8::internal::Code>, v8::internal::RelocInfo::Mode, v8::internal::TypeFeedbackId)
+      1    0.0%    0.0%  v8::internal::Assembler::bind_to(v8::internal::Label*, int)
+      1    0.0%    0.0%  v8::internal::Accessors::ArrayLengthSetter(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&)
+      1    0.0%    0.0%  v8::base::Thread::GetThreadLocal(int)
+      1    0.0%    0.0%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+      1    0.0%    0.0%  v8::Number::Value() const
+      1    0.0%    0.0%  v8::HandleScope::~HandleScope()
+      1    0.0%    0.0%  node::TimerWrap::Now(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::Parser::on_header_value(http_parser*, char const*, unsigned long)
+      1    0.0%    0.0%  int v8::internal::FlexibleBodyVisitor<v8::internal::StaticScavengeVisitor, v8::internal::FlexibleBodyDescriptor<8>, int>::VisitSpecialized<64>(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  int v8::internal::FlexibleBodyVisitor<v8::internal::StaticScavengeVisitor, v8::internal::FlexibleBodyDescriptor<8>, int>::VisitSpecialized<32>(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  _uv_fileno
+      1    0.0%    0.0%  _uprv_compareInvAscii_57
+      1    0.0%    0.0%  _swprintf_l
+      1    0.0%    0.0%  _http_message_needs_eof
+      1    0.0%    0.0%  _fsync$NOCANCEL
+      1    0.0%    0.0%  _fremovexattr
+      1    0.0%    0.0%  ___ungetc
+      1    0.0%    0.0%  ___fchmod_extended
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1331    7.7%    8.0%  JavaScript
+  14785   85.8%   88.4%  C++
+    140    0.8%    0.8%  GC
+    493    2.9%          Shared libraries
+    614    3.6%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    940   52.7%    5.5%  v8::internal::Builtins::~Builtins()
+     86    4.8%    0.5%  v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+     81    4.5%    0.5%  v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     79    4.4%    0.5%  v8::internal::Runtime_GetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     48    2.7%    0.3%  v8::internal::Runtime_WeakCollectionSet(int, v8::internal::Object**, v8::internal::Isolate*)
+     40    2.2%    0.2%  v8::internal::Runtime_NewRestParameter(int, v8::internal::Object**, v8::internal::Isolate*)
+     37    2.1%    0.2%  v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+     34    1.9%    0.2%  v8::internal::Runtime_KeyedStoreIC_Slow(int, v8::internal::Object**, v8::internal::Isolate*)
+     30    1.7%    0.2%  v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     28    1.6%    0.2%  v8::internal::Runtime_ParseJson(int, v8::internal::Object**, v8::internal::Isolate*)
+     27    1.5%    0.2%  v8::internal::Runtime_StringSplit(int, v8::internal::Object**, v8::internal::Isolate*)
+     27    1.5%    0.2%  ___shm_open
+     25    1.4%    0.1%  v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+     20    1.1%    0.1%  v8::internal::Runtime_ThrowDerivedConstructorReturnedNonObject(int, v8::internal::Object**, v8::internal::Isolate*)
+     17    1.0%    0.1%  v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     16    0.9%    0.1%  v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     15    0.8%    0.1%  v8::internal::Runtime_NumberToStringSkipCache(int, v8::internal::Object**, v8::internal::Isolate*)
+     14    0.8%    0.1%  v8::internal::Runtime_ToFastProperties(int, v8::internal::Object**, v8::internal::Isolate*)
+     13    0.7%    0.1%  v8::internal::Runtime_MathAtan2(int, v8::internal::Object**, v8::internal::Isolate*)
+     13    0.7%    0.1%  v8::internal::Runtime_AllocateInTargetSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+     11    0.6%    0.1%  v8::internal::Runtime_Interrupt(int, v8::internal::Object**, v8::internal::Isolate*)
+     10    0.6%    0.1%  v8::internal::FastDtoa(double, v8::internal::FastDtoaMode, int, v8::internal::Vector<char>, int*, int*)
+      9    0.5%    0.1%  v8::internal::Runtime_TryInstallOptimizedCode(int, v8::internal::Object**, v8::internal::Isolate*)
+      9    0.5%    0.1%  v8::internal::Runtime_HasProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      8    0.4%    0.0%  v8::internal::Runtime_StringToNumber(int, v8::internal::Object**, v8::internal::Isolate*)
+      8    0.4%    0.0%  node::TimerWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.4%    0.0%  v8::internal::Runtime_StringToLowerCase(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    0.4%    0.0%  v8::internal::Runtime_CreateNumberFormat(int, v8::internal::Object**, v8::internal::Isolate*)
+      7    0.4%    0.0%  v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      6    0.3%    0.0%  v8::internal::Runtime_ResumeJSGeneratorObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      6    0.3%    0.0%  v8::internal::Runtime_HasOwnProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.3%    0.0%  v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.3%    0.0%  v8::internal::Runtime_MathSqrt(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.3%    0.0%  v8::internal::Heap::AllocateEmptyFixedTypedArray(v8::internal::ExternalArrayType)
+      4    0.2%    0.0%  v8::internal::LookupIterator::Next()
+      3    0.2%    0.0%  v8::internal::Runtime_SuspendJSGeneratorObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.0%  v8::internal::Runtime_StringIndexOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.0%  v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.0%  v8::internal::ObjectHashTable::Remove(v8::internal::Handle<v8::internal::ObjectHashTable>, v8::internal::Handle<v8::internal::Object>, bool*)
+      3    0.2%    0.0%  v8::internal::ObjectHashTable::Lookup(v8::internal::Handle<v8::internal::Object>)
+      3    0.2%    0.0%  v8::internal::FindCaller(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSFunction>)
+      3    0.2%    0.0%  v8::internal::BasicJsonStringifier::ApplyToJsonFunction(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      3    0.2%    0.0%  _pathconf
+      2    0.1%    0.0%  v8::internal::Runtime_StringCharCodeAtRT(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  v8::internal::Runtime_StoreCallbackProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  v8::internal::Runtime_MapGrow(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  v8::internal::Runtime_InstanceOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  v8::internal::Runtime_GeneratorClose(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  v8::internal::Runtime_ForInEnumerate(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  v8::internal::PropertyCell::InvalidateEntry(v8::internal::Handle<v8::internal::GlobalDictionary>, int)
+      2    0.1%    0.0%  v8::internal::LookupIterator::Delete()
+      2    0.1%    0.0%  v8::internal::JSObject::NormalizeProperties(v8::internal::Handle<v8::internal::JSObject>, v8::internal::PropertyNormalizationMode, int, char const*)
+      2    0.1%    0.0%  v8::internal::IteratingStringHasher::VisitConsString(v8::internal::ConsString*)
+      2    0.1%    0.0%  v8::internal::Factory::NewInternalizedStringImpl(v8::internal::Handle<v8::internal::String>, int, unsigned int)
+      2    0.1%    0.0%  v8::internal::DiyFp::Multiply(v8::internal::DiyFp const&)
+      2    0.1%    0.0%  v8::internal::Dictionary<v8::internal::NameDictionary, v8::internal::NameDictionaryShape, v8::internal::Handle<v8::internal::Name> >::GenerateNewEnumerationIndices(v8::internal::Handle<v8::internal::NameDictionary>)
+      2    0.1%    0.0%  v8::internal::BasicJsonStringifier::SerializeSmi(v8::internal::Smi*)
+      2    0.1%    0.0%  v8::Value::IsBoolean() const
+      2    0.1%    0.0%  _uv_timer_start
+      2    0.1%    0.0%  _renameat
+      1    0.1%    0.0%  v8::internal::StringCharLoadGenerator::Generate(v8::internal::MacroAssembler*, v8::internal::Register, v8::internal::Register, v8::internal::Register, v8::internal::Label*)
+      1    0.1%    0.0%  v8::internal::Runtime_ToBooleanIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_RoundNumber(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_GetPrototype(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_GeneratorGetContinuation(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_EnqueueMicrotask(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_CreateJSGeneratorObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::PowersOfTenCache::GetCachedPowerForBinaryExponentRange(int, int, v8::internal::DiyFp*, int*)
+      1    0.1%    0.0%  v8::internal::Object::CreateListFromArrayLike(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::ElementTypes)
+      1    0.1%    0.0%  v8::internal::NormalizedMapCache::New(v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::LookupIterator::PropertyOrElement(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, bool*, v8::internal::LookupIterator::Configuration)
+      1    0.1%    0.0%  v8::internal::LookupIterator::HolderIsInContextIndex(unsigned int) const
+      1    0.1%    0.0%  v8::internal::Isolate::SetCaptureStackTraceForUncaughtExceptions(bool, int, v8::StackTrace::StackTraceOptions)
+      1    0.1%    0.0%  v8::internal::IntToCString(int, v8::internal::Vector<char>)
+      1    0.1%    0.0%  v8::internal::HeapSnapshotJSONSerializer::StringsMatch(void*, void*)
+      1    0.1%    0.0%  v8::internal::Heap::CopyFixedArrayUpTo(v8::internal::FixedArray*, int, v8::internal::PretenureFlag)
+      1    0.1%    0.0%  v8::internal::Heap::AllocateRawOneByteString(int, v8::internal::PretenureFlag)
+      1    0.1%    0.0%  v8::internal::HashTable<v8::internal::SeededNumberDictionary, v8::internal::SeededNumberDictionaryShape, unsigned int>::FindEntry(unsigned int)
+      1    0.1%    0.0%  v8::internal::FlatStringReader::FlatStringReader(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>)
+      1    0.1%    0.0%  v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, int, int, v8::internal::Strength, v8::internal::ArrayStorageAllocationMode, v8::internal::PretenureFlag)
+      1    0.1%    0.0%  v8::internal::Factory::NewFixedArray(int, v8::internal::PretenureFlag)
+      1    0.1%    0.0%  v8::internal::DoubleToCString(double, v8::internal::Vector<char>)
+      1    0.1%    0.0%  v8::internal::DoubleToAscii(double, v8::internal::DtoaMode, int, v8::internal::Vector<char>, int*, int*, int*)
+      1    0.1%    0.0%  v8::internal::Dictionary<v8::internal::UnseededNumberDictionary, v8::internal::UnseededNumberDictionaryShape, unsigned int>::Add(v8::internal::Handle<v8::internal::UnseededNumberDictionary>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDetails)
+      1    0.1%    0.0%  v8::internal::AssemblerBase::FlushICache(v8::internal::Isolate*, void*, unsigned long)
+      1    0.1%    0.0%  node::TimerWrap::Now(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.0%  node::InitFs(v8::Local<v8::Object>, v8::Local<v8::Value>, v8::Local<v8::Context>, void*)
+      1    0.1%    0.0%  node::HandleWrap::~HandleWrap()
+      1    0.1%    0.0%  __spin_unlock
+      1    0.1%    0.0%  ___inline_signbitl
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+  12819   74.4%  ___mac_get_pid
+
+    614    3.6%  UNKNOWN
+
+    444    2.6%  /usr/local/bin/node
+     69   15.5%    v8::internal::Builtins::~Builtins()
+     10   14.5%      LazyCompile: ~byteLength buffer.js:352:20
+      6   60.0%        LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      6  100.0%          LazyCompile: *respond /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:194:17
+      6  100.0%            LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:136:32
+      3   30.0%        LazyCompile: *body /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:128:11
+      3  100.0%          LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:91:40
+      3  100.0%            LazyCompile: ~_callee3$ /Users/max/src/codinggame/coders_strike_back/dist/index.js:72:51
+      1   10.0%        LazyCompile: ~OutgoingMessage.end _http_outgoing.js:532:41
+      1  100.0%          LazyCompile: ~respond /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:194:17
+      1  100.0%            LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:136:32
+      8   11.6%      LazyCompile: *apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:261:24
+      4   50.0%        LazyCompile: *DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      4  100.0%          LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      4  100.0%            LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      3   37.5%        LazyCompile: *apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:261:24
+      3  100.0%          LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      3  100.0%            LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      1   12.5%        LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      1  100.0%          LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      1  100.0%            LazyCompile: *map native array.js:996:18
+      6    8.7%      LazyCompile: ~resOnFinish _http_server.js:496:25
+      4   66.7%        LazyCompile: *emit events.js:136:44
+      4  100.0%          LazyCompile: ~finish _http_outgoing.js:579:18
+      4  100.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:87:25
+      2   33.3%        LazyCompile: *emitNone events.js:84:18
+      2  100.0%          LazyCompile: ~emit events.js:136:44
+      2  100.0%            LazyCompile: ~finish _http_outgoing.js:579:18
+      6    8.7%      LazyCompile: ~createWriteReq net.js:727:24
+      6  100.0%        LazyCompile: ~Socket._writeGeneric net.js:654:42
+      3   50.0%          LazyCompile: *clearBuffer _stream_writable.js:376:21
+      3  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      2   33.3%          LazyCompile: *writeOrBuffer _stream_writable.js:269:23
+      2  100.0%            LazyCompile: *Console.log console.js:42:33
+      1   16.7%          LazyCompile: *doWrite _stream_writable.js:299:17
+      1  100.0%            LazyCompile: ~clearBuffer _stream_writable.js:376:21
+      5    7.2%      LazyCompile: *nextTick internal/process/next_tick.js:140:20
+      2   40.0%        LazyCompile: *Readable.read _stream_readable.js:272:35
+      2  100.0%          LazyCompile: *resume_ _stream_readable.js:735:17
+      2  100.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:87:25
+      1   20.0%        LazyCompile: *onwrite _stream_writable.js:329:17
+      1  100.0%          LazyCompile: *WritableState.onwrite _stream_writable.js:88:26
+      1  100.0%            LazyCompile: ~Socket._writeGeneric net.js:654:42
+      1   20.0%        LazyCompile: *notify /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:66:22
+      1  100.0%          LazyCompile: $resolve /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:158:24
+      1  100.0%            LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_ctx.js:7:28
+      1   20.0%        LazyCompile: *normalizeStringPosix path.js:78:30
+      1  100.0%          LazyCompile: ~OutgoingMessage._send _http_outgoing.js:122:43
+      1  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      5    7.2%      LazyCompile: *duplicateAndInit /Users/max/src/codinggame/coders_strike_back/dist/pod.js:101:41
+      3   60.0%        LazyCompile: *apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:261:24
+      3  100.0%          LazyCompile: *DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      3  100.0%            LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      2   40.0%        LazyCompile: *DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      2  100.0%          LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      2  100.0%            LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      3    4.3%      LazyCompile: ~duplicateAndInit /Users/max/src/codinggame/coders_strike_back/dist/pod.js:101:41
+      3  100.0%        LazyCompile: ~module.exports.shadowPodMoveToTarget /Users/max/src/codinggame/coders_strike_back/dist/track.js:126:49
+      3  100.0%          LazyCompile: ~apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:261:24
+      2   66.7%            LazyCompile: *DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      1   33.3%            LazyCompile: ~DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      3    4.3%      LazyCompile: ~Router.match /Users/max/src/codinggame/coders_strike_back/node_modules/koa-router/lib/router.js:621:35
+      3  100.0%        LazyCompile: dispatch /Users/max/src/codinggame/coders_strike_back/node_modules/koa-router/lib/router.js:299:36
+      3  100.0%          LazyCompile: next native generator.js:13:29
+      3  100.0%            LazyCompile: onFulfilled /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:62:25
+      3    4.3%      LazyCompile: *optimalMove /Users/max/src/codinggame/coders_strike_back/dist/pod.js:251:36
+      3  100.0%        LazyCompile: *optimalMoveAI /Users/max/src/codinggame/coders_strike_back/dist/pod.js:212:38
+      3  100.0%          LazyCompile: *module.exports.turn /Users/max/src/codinggame/coders_strike_back/dist/track.js:55:32
+      3  100.0%            LazyCompile: ~_callee3$ /Users/max/src/codinggame/coders_strike_back/dist/index.js:72:51
+      2    2.9%      LazyCompile: ~nextTick internal/process/next_tick.js:140:20
+      1   50.0%        LazyCompile: *onwrite _stream_writable.js:329:17
+      1  100.0%          LazyCompile: *WritableState.onwrite _stream_writable.js:88:26
+      1  100.0%            LazyCompile: ~Socket._writeGeneric net.js:654:42
+      1   50.0%        LazyCompile: *notify /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:66:22
+      1  100.0%          LazyCompile: $resolve /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:158:24
+      1  100.0%            LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_ctx.js:7:28
+      2    2.9%      LazyCompile: *next /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:198:23
+      2  100.0%        LazyCompile: ~findOptimalSolution /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:78:29
+      2  100.0%          LazyCompile: ~findOptimalSolutionIBFS /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:54:33
+      2  100.0%            LazyCompile: ~predictOptions /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:41:24
+      2    2.9%      LazyCompile: *OutgoingMessage._storeHeader _http_outgoing.js:190:50
+      1   50.0%        LazyCompile: ~ServerResponse.writeHead _http_server.js:160:46
+      1  100.0%          LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      1  100.0%            LazyCompile: *respond /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:194:17
+      1   50.0%        LazyCompile: *ServerResponse.writeHead _http_server.js:160:46
+      1  100.0%          LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      1  100.0%            LazyCompile: *respond /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:194:17
+     40    9.0%    /usr/local/bin/node
+     28   70.0%      LazyCompile: stringify native json.js:162:23
+     27   96.4%        LazyCompile: ~_callee3$ /Users/max/src/codinggame/coders_strike_back/dist/index.js:72:51
+     27  100.0%          LazyCompile: tryCatch /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:60:20
+     27  100.0%            LazyCompile: *invoke /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:233:27
+      1    3.6%        LazyCompile: ~Module._findPath module.js:137:28
+      1  100.0%          LazyCompile: *Module._resolveFilename module.js:426:35
+      1  100.0%            LazyCompile: ~Module._load module.js:383:24
+      5   12.5%      LazyCompile: *resetTryEntry /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:399:25
+      5  100.0%        LazyCompile: *InnerArrayForEach native array.js:946:27
+      5  100.0%          LazyCompile: *forEach native array.js:956:22
+      5  100.0%            LazyCompile: *Context.reset /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:485:20
+      5   12.5%      LazyCompile: *removeListener events.js:310:28
+      5  100.0%        LazyCompile: *cleanup /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:58:19
+      5  100.0%          LazyCompile: ~callback /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:53:20
+      5  100.0%            LazyCompile: ~onevent /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:81:26
+      2    5.0%      LazyCompile: ~removeListener events.js:310:28
+      1   50.0%        LazyCompile: ~cleanup /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:58:19
+      1  100.0%          LazyCompile: ~callback /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:53:20
+      1  100.0%            LazyCompile: ~onevent /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:81:26
+      1   50.0%        LazyCompile: *cleanup /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:58:19
+      1  100.0%          LazyCompile: ~callback /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:53:20
+      1  100.0%            LazyCompile: ~onevent /Users/max/src/codinggame/coders_strike_back/node_modules/ee-first/index.js:81:26
+     34    7.7%    v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+     21   61.8%      LazyCompile: *insert timers.js:119:16
+     21  100.0%        LazyCompile: *OutgoingMessage._storeHeader _http_outgoing.js:190:50
+     15   71.4%          LazyCompile: *ServerResponse.writeHead _http_server.js:160:46
+     15  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      6   28.6%          LazyCompile: ~ServerResponse.writeHead _http_server.js:160:46
+      6  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      8   23.5%      LazyCompile: *OutgoingMessage.setHeader _http_outgoing.js:337:47
+      5   62.5%        LazyCompile: *body /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:128:11
+      5  100.0%          LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:91:40
+      5  100.0%            LazyCompile: ~_callee3$ /Users/max/src/codinggame/coders_strike_back/dist/index.js:72:51
+      2   25.0%        LazyCompile: *module.exports.set /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:430:16
+      1   50.0%          LazyCompile: ~proto.(anonymous function) /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:39:25
+      1  100.0%            LazyCompile: cors /Users/max/src/codinggame/coders_strike_back/node_modules/koa-cors/index.js:48:24
+      1   50.0%          LazyCompile: *proto.(anonymous function) /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:39:25
+      1  100.0%            LazyCompile: cors /Users/max/src/codinggame/coders_strike_back/node_modules/koa-cors/index.js:48:24
+      1   12.5%        LazyCompile: ~module.exports.set /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:430:16
+      1  100.0%          LazyCompile: ~proto.(anonymous function) /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:39:25
+      1  100.0%            LazyCompile: cors /Users/max/src/codinggame/coders_strike_back/node_modules/koa-cors/index.js:48:24
+      3    8.8%      LazyCompile: *IncomingMessage._addHeaderLine _http_incoming.js:132:52
+      3  100.0%        LazyCompile: *parserOnHeadersComplete _http_common.js:45:33
+      1    2.9%      LazyCompile: ~forEachCode /Users/max/src/codinggame/coders_strike_back/node_modules/statuses/index.js:60:51
+      1  100.0%        LazyCompile: ~InnerArrayForEach native array.js:946:27
+      1  100.0%          LazyCompile: ~forEach native array.js:956:22
+      1  100.0%            LazyCompile: ~populateStatusesMap /Users/max/src/codinggame/coders_strike_back/node_modules/statuses/index.js:57:30
+      1    2.9%      LazyCompile: ~OutgoingMessage.setHeader _http_outgoing.js:337:47
+      1  100.0%        LazyCompile: ~module.exports.set /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:430:16
+      1  100.0%          LazyCompile: ~length /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:185:13
+      1  100.0%            LazyCompile: ~body /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:128:11
+     18    4.1%    v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      2   11.1%      LazyCompile: ~InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      1   50.0%        LazyCompile: ~addChild /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:142:27
+      1  100.0%          LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      1  100.0%            LazyCompile: ~map native array.js:996:18
+      1   50.0%        LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      1  100.0%          LazyCompile: *map native array.js:996:18
+      1  100.0%            LazyCompile: *expandNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:208:29
+      2   11.1%      LazyCompile: *resume_ _stream_readable.js:735:17
+      2  100.0%        LazyCompile: *_tickCallback internal/process/next_tick.js:87:25
+      2   11.1%      LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      2  100.0%        LazyCompile: *map native array.js:996:18
+      2  100.0%          LazyCompile: *expandNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:208:29
+      2  100.0%            LazyCompile: ~findOptimalSolution /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:78:29
+      1    5.6%      LazyCompile: ~then /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:209:24
+      1  100.0%        LazyCompile: ~require.catch /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:220:22
+      1  100.0%          LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:132:18
+      1  100.0%            LazyCompile: ~emitTwo events.js:104:17
+      1    5.6%      LazyCompile: ~module.exports.set /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/response.js:430:16
+      1  100.0%        LazyCompile: ~proto.(anonymous function) /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:39:25
+      1  100.0%          LazyCompile: cors /Users/max/src/codinggame/coders_strike_back/node_modules/koa-cors/index.js:48:24
+      1  100.0%            LazyCompile: next native generator.js:13:29
+      1    5.6%      LazyCompile: ~apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:86:24
+      1  100.0%        LazyCompile: ~InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      1  100.0%          LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      1  100.0%            LazyCompile: *map native array.js:996:18
+      1    5.6%      LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/delegates/index.js:71:40
+      1  100.0%        LazyCompile: dispatch /Users/max/src/codinggame/coders_strike_back/node_modules/koa-router/lib/router.js:299:36
+      1  100.0%          LazyCompile: next native generator.js:13:29
+      1  100.0%            LazyCompile: onFulfilled /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:62:25
+      1    5.6%      LazyCompile: run /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:74:23
+      1  100.0%        LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:70:21
+      1  100.0%          LazyCompile: flush /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_microtask.js:11:23
+      1  100.0%            LazyCompile: *_combinedTickCallback internal/process/next_tick.js:65:33
+      1    5.6%      LazyCompile: *sin native fdlibm.js:248:17
+      1  100.0%        LazyCompile: ~rotate /Users/max/src/codinggame/coders_strike_back/dist/vector.js:45:31
+      1  100.0%          LazyCompile: ~duplicateAndInit /Users/max/src/codinggame/coders_strike_back/dist/pod.js:101:41
+      1  100.0%            LazyCompile: ~module.exports.shadowPodMoveToTarget /Users/max/src/codinggame/coders_strike_back/dist/track.js:126:49
+      1    5.6%      LazyCompile: *optimalMoveAI /Users/max/src/codinggame/coders_strike_back/dist/pod.js:212:38
+      1  100.0%        LazyCompile: ~module.exports.turn /Users/max/src/codinggame/coders_strike_back/dist/track.js:55:32
+      1  100.0%          LazyCompile: ~_callee3$ /Users/max/src/codinggame/coders_strike_back/dist/index.js:72:51
+      1  100.0%            LazyCompile: tryCatch /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:60:20
+      1    5.6%      LazyCompile: *module.exports.shadowPodMoveToTarget /Users/max/src/codinggame/coders_strike_back/dist/track.js:126:49
+      1  100.0%        LazyCompile: ~apply /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:261:24
+      1  100.0%          LazyCompile: *DecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:225:27
+      1  100.0%            LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      1    5.6%      LazyCompile: *acceleration$ /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:366:55
+      1  100.0%        LazyCompile: tryCatch /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:60:20
+      1  100.0%          LazyCompile: ~invoke /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:233:27
+      1  100.0%            LazyCompile: *velocity$ /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:392:51
+      1    5.6%      LazyCompile: *Module.require module.js:465:36
+      1  100.0%        LazyCompile: require internal/module.js:17:19
+      1  100.0%          Function: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/shim.js:1:11
+      1  100.0%            LazyCompile: ~Module._compile module.js:481:37
+      1    5.6%      LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:132:18
+      1  100.0%        LazyCompile: ~emitTwo events.js:104:17
+      1  100.0%          LazyCompile: ~emit events.js:136:44
+      1  100.0%            LazyCompile: ~parserOnIncoming _http_server.js:460:28
+      1    5.6%      LazyCompile: $resolve /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:158:24
+      1  100.0%        LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_ctx.js:7:28
+      1  100.0%          LazyCompile: run /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:74:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:70:21
+     14    3.2%    v8::internal::Runtime_GetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      8   57.1%      LazyCompile: *IncomingMessage._addHeaderLine _http_incoming.js:132:52
+      7   87.5%        LazyCompile: *parserOnHeadersComplete _http_common.js:45:33
+      1   12.5%        LazyCompile: ~IncomingMessage._addHeaderLines _http_incoming.js:103:53
+      1  100.0%          LazyCompile: ~parserOnHeadersComplete _http_common.js:45:33
+      4   28.6%      LazyCompile: *DefineIndexedProperty native array.js:48:31
+      3   75.0%        LazyCompile: *map native array.js:996:18
+      2   66.7%          LazyCompile: *push /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:183:23
+      2  100.0%            LazyCompile: ~findOptimalSolution /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:78:29
+      1   33.3%          LazyCompile: ~push /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:183:23
+      1  100.0%            LazyCompile: ~findOptimalSolution /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:78:29
+      1   25.0%        LazyCompile: *InnerArrayFilter native array.js:924:26
+      1  100.0%          LazyCompile: *filter native array.js:938:21
+      1  100.0%            LazyCompile: *expandNode /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:208:29
+      1    7.1%      LazyCompile: *module.exports.print /Users/max/src/codinggame/coders_strike_back/dist/printapi.js:18:33
+      1  100.0%        LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/track.js:90:29
+      1  100.0%          LazyCompile: *InnerArrayForEach native array.js:946:27
+      1  100.0%            LazyCompile: *forEach native array.js:956:22
+      1    7.1%      LazyCompile: *insert timers.js:119:16
+      1  100.0%        LazyCompile: *OutgoingMessage._storeHeader _http_outgoing.js:190:50
+      1  100.0%          LazyCompile: *ServerResponse.writeHead _http_server.js:160:46
+      1  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+     12    2.7%    v8::internal::Runtime_NewRestParameter(int, v8::internal::Object**, v8::internal::Isolate*)
+      6   50.0%      LazyCompile: *notify /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:66:22
+      6  100.0%        LazyCompile: $resolve /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:158:24
+      6  100.0%          LazyCompile: ~<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/_ctx.js:7:28
+      4   66.7%            LazyCompile: run /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.promise.js:74:23
+      2   33.3%            LazyCompile: *next /Users/max/src/codinggame/coders_strike_back/node_modules/co/index.js:97:18
+      4   33.3%      LazyCompile: *makeInvokeMethod /Users/max/src/codinggame/coders_strike_back/node_modules/regenerator-runtime/runtime.js:230:28
+      2   50.0%        LazyCompile: *distance /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:421:18
+      1   50.0%          LazyCompile: ~stepsToPoint /Users/max/src/codinggame/coders_strike_back/dist/predictor.js:326:22
+      1  100.0%            LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      1   50.0%          LazyCompile: *InformedDecisionTreeNode /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:118:35
+      1  100.0%            LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/dist/findsolution.js:211:20
+      1   25.0%        LazyCompile: *_callee6 /Users/max/src/codinggame/coders_strike_back/dist/index.js:146:50
+      1  100.0%          LazyCompile: <anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa-compose/index.js:19:20
+      1  100.0%            LazyCompile: next native generator.js:13:29
+      1   25.0%        LazyCompile: *_callee3 /Users/max/src/codinggame/coders_strike_back/dist/index.js:71:59
+      1  100.0%          LazyCompile: dispatch /Users/max/src/codinggame/coders_strike_back/node_modules/koa-router/lib/router.js:299:36
+      1  100.0%            LazyCompile: next native generator.js:13:29
+      1    8.3%      LazyCompile: ~InnerArraySort native array.js:699:24
+      1  100.0%        LazyCompile: *sort native array.js:918:19
+      1  100.0%          LazyCompile: *sort /Users/max/src/codinggame/coders_strike_back/node_modules/core-js/modules/es6.array.sort.js:18:22
+      1  100.0%            LazyCompile: ~push /Users/max/src/codinggame/coders_strike_back/dist/informedsearch.js:183:23
+      1    8.3%      LazyCompile: *attachFinishedListener /Users/max/src/codinggame/coders_strike_back/node_modules/on-finished/index.js:90:32
+      1  100.0%        LazyCompile: *<anonymous> /Users/max/src/codinggame/coders_strike_back/node_modules/koa/lib/application.js:132:18
+      1  100.0%          LazyCompile: ~emitTwo events.js:104:17
+      1  100.0%            LazyCompile: ~emit events.js:136:44
+     10    2.3%    v8::internal::Runtime_KeyedStoreIC_Slow(int, v8::internal::Object**, v8::internal::Isolate*)
+     10  100.0%      LazyCompile: *insert timers.js:119:16
+     10  100.0%        LazyCompile: *OutgoingMessage._storeHeader _http_outgoing.js:190:50
+      9   90.0%          LazyCompile: *ServerResponse.writeHead _http_server.js:160:46
+      9  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+      1   10.0%          LazyCompile: ~ServerResponse.writeHead _http_server.js:160:46
+      1  100.0%            LazyCompile: *OutgoingMessage.end _http_outgoing.js:532:41
+

@@ -1,0 +1,659 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"optimal",
+				"optimalSuccessor"
+			],
+			[
+				"cellsAround",
+				"cellsAroundPlayer"
+			],
+			[
+				"bombs",
+				"bombsaround"
+			],
+			[
+				"DecisionTree",
+				"DecisionTreeNode"
+			],
+			[
+				"CELL_BOX_",
+				"CELL_BOX_TBD"
+			],
+			[
+				"InitBattle",
+				"InitBattleFieldObject"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "treesearch.js",
+			"settings":
+			{
+				"buffer_size": 10778,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "predictor.js",
+			"settings":
+			{
+				"buffer_size": 4285,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "battlefield.js",
+			"settings":
+			{
+				"buffer_size": 4847,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cell.js",
+			"settings":
+			{
+				"buffer_size": 2749,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sonic.js",
+			"settings":
+			{
+				"buffer_size": 741,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "class Sonic {"
+			}
+		},
+		{
+			"file": "interfacetools.js",
+			"settings":
+			{
+				"buffer_size": 2523,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "celltools.js",
+			"settings":
+			{
+				"buffer_size": 2129,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/generic.js",
+			"settings":
+			{
+				"buffer_size": 4388,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.js",
+			"settings":
+			{
+				"buffer_size": 3383,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/testutils.js",
+			"settings":
+			{
+				"buffer_size": 2108,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"last_filter": "packa",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: self"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/max/src/codinggame/hypersonic",
+		"/Users/max/src/codinggame/hypersonic/test"
+	],
+	"file_history":
+	[
+		"/Users/max/src/codinggame/hypersonic/p.js",
+		"/Users/max/src/codinggame/hypersonic/test/bonustrap.js",
+		"/Users/max/src/codinggame/hypersonic/bundle.js",
+		"/Users/max/src/codinggame/hypersonic/main.js",
+		"/Users/max/src/codinggame/hypersonic/test/bombsaround.js",
+		"/Users/max/src/codinggame/hypersonic/test/generic.js",
+		"/Users/max/src/codinggame/hypersonic/package.json",
+		"/Users/max/src/codinggame/hypersonic/log.js",
+		"/Users/max/src/codinggame/hypersonic/bomb.js",
+		"/Users/max/src/codinggame/hypersonic/test/testutils.js",
+		"/Users/max/src/codinggame/hypersonic/test/bombsorder.js",
+		"/Users/max/src/codinggame/hypersonic/test/closedcorner.js",
+		"/Users/max/src/codinggame/hypersonic/test/bonuses.js",
+		"/Users/max/src/codinggame/hypersonic/test/4boxes.js",
+		"/Users/max/src/codinggame/hypersonic/test/2vs1boxes.js",
+		"/Users/max/src/codinggame/hypersonic/test/1box.js",
+		"/Users/max/src/codinggame/hypersonic/test/predict.js",
+		"/Users/max/src/codinggame/hypersonic/test/bonustypes.js",
+		"/Users/max/src/codinggame/hypersonic/test/closed.js",
+		"/Users/max/src/codinggame/hypersonic/test/enemy.js",
+		"/Users/max/src/codinggame/hypersonic/test/enemyandbomb.js",
+		"/Users/max/src/codinggame/hypersonic/test/runaway.js",
+		"/Users/max/src/codinggame/hypersonic/test/threat.js",
+		"/Users/max/src/codinggame/hypersonic/battlefield.js",
+		"/Users/max/src/codinggame/hypersonic/cell.js",
+		"/Users/max/src/codinggame/hypersonic/celltools.js",
+		"/Users/max/src/codinggame/hypersonic/config.js",
+		"/Users/max/src/codinggame/hypersonic/webpack.config.js",
+		"/Users/max/src/codinggame/hypersonic/index.js",
+		"/Users/max/src/codinggame/hypersonic/mainloop.js",
+		"/Users/max/src/codinggame/hypersonic/printapi.js",
+		"/Users/max/src/codinggame/hypersonic/gamecontroller.js",
+		"/Users/max/src/codinggame/hypersonic/config.json"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"DecisionTreeNode",
+			"cellsAroundXY",
+			"new Cell",
+			"evalStateProfit",
+			"evalTerminalProfit",
+			"initCell",
+			"deployPlayerBomb",
+			"deployBomb",
+			"isBomb",
+			"console.log",
+			"benefit.move",
+			"benefit",
+			"benefit(",
+			"bombRadius",
+			"bombLeft",
+			"player",
+			"CELL_NEARTOEXPLODE",
+			"benefit()",
+			"neighbours",
+			"Expanding node",
+			"bombsLeft",
+			"bombRadius",
+			"IsDanger",
+			"IsBonus",
+			"CELL_BONUS",
+			"PodEstimateTarget",
+			"loop",
+			"cast_sender.js",
+			"static.doubleclick.net",
+			"hero.artbreezestudios.com",
+			"okvideo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"evalStateUtility",
+			"evalTerminalUtility"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "treesearch.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4749,
+								4749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1738.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "predictor.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								936,
+								936
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 40.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "battlefield.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2291,
+								2291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 933.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "cell.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2299,
+								2299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 715.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sonic.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								159
+							]
+						],
+						"settings":
+						{
+							"auto_name": "class Sonic {",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "interfacetools.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1665,
+								1665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 606.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "celltools.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1867,
+								1867
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "test/generic.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3378,
+								3378
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "test/testutils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1346,
+								1346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 169.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

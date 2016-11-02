@@ -1,0 +1,37 @@
+{
+  "name": "hypersonic",
+  "version": "1.0.0",
+  "description": "Hypersonic championship playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-node test/generic.js | tee test/generic.log",
+    "closedcorner": "babel-node test/closedcorner.js",
+    "threat": "babel-node test/threat.js",
+    "bonuses": "babel-node test/bonuses.js",
+    "runaway": "babel-node test/runaway.js",
+    "1box": "babel-node test/1box.js",
+    "2vs1boxes": "babel-node test/2vs1boxes.js",
+    "4boxes": "babel-node test/4boxes.js",
+    "closed": "babel-node test/closed.js",
+    "enemy": "babel-node test/enemy.js",
+    "enemyandbomb": "babel-node test/enemyandbomb.js",
+    "bombsaround": "babel-node test/bombsaround.js",
+    "bombsorder": "babel-node test/bombsorder.js",
+    "bonustypes": "babel-node test/bonustypes.js",
+    "bonustrap": "babel-node test/bonustrap.js",
+    "build": "babel *.js --out-dir dist"
+  },
+  "author": "Maxim Vorobjov",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-builtin-extend": "^1.1.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.13.2",
+    "webpack": "^1.13.1"
+  }
+}

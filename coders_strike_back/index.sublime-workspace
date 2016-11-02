@@ -1,0 +1,411 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "var printapi = require(\"./printapi\");\nvar data = require(\"./data\");\nvar config = require(\"./config\");\n\nvar animation = require(\"./mainloop\"); \nanimation.interface(data.readline, printapi.print, printapi.printErr);\n\nfor(var turn=0; animation.turn() && turn < config.limitTurns; turn++) {\n	console.log(\"NEXT TURN \" + turn);\n}\n\n\n\n",
+			"file": "index.js",
+			"file_size": 325,
+			"file_write_time": 131124891220000000,
+			"settings":
+			{
+				"buffer_size": 327,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "printapi.js",
+			"settings":
+			{
+				"buffer_size": 436,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gamecontroller.js",
+			"settings":
+			{
+				"buffer_size": 633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var config = require(\"./config\");\n\nconst _degreeToRadians = 180/Math.PI;\nconst _zeroPoint = new Point(0, 0);\nconst _horizonVector = new Vector(_zeroPoint, new Point(100, 0));\nconst _collisionBehaviour = {x: 0, y: 0, thrust: \"SHIELD\"};\n\nvar trackConfig = false;\nvar boostUsed = false;\n\nvar myPods = [new Pod()];\n\nvar readline, print, printErr;\n\nmodule.exports.interface = (readlineF, printF, printErrF) => {\n    readline = readlineF;\n    print = printF;\n    printErr = printErrF;\n}\n\n// EXPORT for external modules\n\n// game loop\nmodule.exports.turn = () => {\n    if(!trackConfig) GlobalInit();\n    myPods[0].read().updateCheckpoints();\n    printErr(\"Pod 1: \" + JSON.stringify(myPods));\n\n    var target1 = myPods[0].optimalMove(); // {x:, y:, thrust:}\n//    var target2 = myPods[1].pickOptimalTarget(hisPods).huntMove(); // {x:, y:, thrust:}\n        \n//    if(myPods[0].collisionImpact(hisPods) > .25) target1 = _collisionBehaviour;\n//    if(myPods[1].collisionImpact(hisPods) > 0) target2 = _collisionBehaviour;\n\n    // You have to output the target position\n    // followed by the power (0 <= thrust <= 100)\n    // i.e.: \"x y thrust\"\n    print(target1.x + ' ' + target1.y + ' ' + target1.thrust);\n//    print(target2.x + ' ' + target2.y + ' ' + target2.thrust);\n    printErr(\"target1 turn: \" + JSON.stringify(target1));\n\n    if(myPods[0].totalCheckpoints < trackConfig.totalCheckpointsLaps)\n        return true;\n}\n\nmodule.exports.calculatePodMoveToTarget = (podId, nx, ny, thrust) => {\n    var pod = myPods[podId];\n    var intentVector = new Vector(pod.position, new Point(nx, ny));\n\n    var res = pod.calculateMove(intentVector, thrust);\n    var nextCheckpointId = pod.nextCheckpointId;\n    if(trackConfig.checkpoints[nextCheckpointId].distance(res.position)<600) \n        nextCheckpointId = (nextCheckpointId + 1) % trackConfig.numCheckpoints;\n\n    return Object.assign({nextCheckpointId: nextCheckpointId}, res);\n};\n\n//// BELOW is a copy form codinggame\n\n// Geometry objects library\n\n// Point always has integer coordinates\nfunction Point(x, y) {\n    this.x = x;\n    this.y = y;\n    this.rotate = rotatePoint;\n    this.distance = distanceToPoint;\n    this.add = pointAddVector;\n    this.angle = vectorPointAngle;\n}\n\n// Note: vector might have float coordinates\nfunction Vector(p1, p2) {\n    this.x = p2.x - p1.x;\n    this.y = p2.y - p1.y;\n    this.angle = vectorPointAngle;\n    this.angleTo = vectorAngleToVector;\n    this.value = vectorLength;\n    this.rotate = rotateVector;\n    this.scale = scaleVector;\n    this.add = vectorAddVector;\n}\n\nfunction pointAddVector(v) {\n    return new Point(this.x + Math.round(v.x), this.y + Math.round(v.y));\n}\n\nfunction vectorAddVector(v) {\n    return new Vector(_zeroPoint, new Point(this.x + v.x, this.y + v.y));\n}\n\nfunction scaleVector(s) {\n    return new Vector(_zeroPoint, new Point(this.x*s, this.y*s));\n}\n\nfunction rotatePoint(around, angle) {\n    var normalizedX = this.x - around.x;\n    var normalizedY = this.y - around.y;\n    var angleRad = angle / _degreeToRadians;\n    var rotatedX = normalizedX * Math.cos(angleRad) - normalizedY * Math.sin(angleRad) + around.x;\n    var rotatedY = normalizedX * Math.sin(angleRad) + normalizedY * Math.cos(angleRad) + around.y;\n\n    return new Point(Math.round(rotatedX), Math.round(rotatedY));   \n}\n\nfunction rotateVector(angle) {\n    var angleRad = angle / _degreeToRadians;\n    var rotatedX = this.x * Math.cos(angleRad) - this.y * Math.sin(angleRad);\n    var rotatedY = this.x * Math.sin(angleRad) + this.y * Math.cos(angleRad);\n    return new Vector(_zeroPoint, new Point(rotatedX, rotatedY));\n}\n\nfunction vectorAngleToVector(v2) {\n    var angleV1 = Math.atan2(-this.y, this.x);\n    var angleV2 = Math.atan2(-v2.y, v2.x);\n\n    var delta = angleV2-angleV1;\n    if (delta > Math.PI)\n        delta -= Math.PI*2;\n    else if (delta < -Math.PI)\n        delta += Math.PI*2;\n\n    return delta * _degreeToRadians;\n}\n\nfunction vectorPointAngle() {\n    var angle = Math.atan2(-this.y, this.x);\n    if (angle > 0)\n        angle = 2*Math.PI - angle;\n    else if (angle < 0)\n        angle *= -1;\n        \n    return angle * _degreeToRadians;\n}\n\nfunction distanceToPoint(p2) {\n    return Math.hypot(this.x - p2.x, this.y - p2.y);\n}\n\nfunction vectorLength() {\n    return Math.hypot(this.x, this.y);\n}\n\n\n// Pod functions\n\nfunction Pod() {\n    this.totalCheckpoints = 0;\n    this.target = false;\n    this.read = readPod;\n    this.updateCheckpoints = updatePodCheckpoints;\n    this.relativeStats = podRelativeStats;\n    this.optimalMove = podOptimalMove;\n    this.collisionImpact = podCollisionImpact;\n    this.huntMove = podHuntMove;\n    this.pickOptimalTarget = podPickOptimalTarget;\n    this.isMovingTowardsMe = podIsMovingTowardsMe;\n    this.extrapolatePosition = podExtrapolatePosition;\n    this.calculateMove = podCalculateMove;\n}\n\nfunction readPod() {\n    var [x, y, vx, vy, a, cid] = (input=readline()).split(' ').map(toInt);\n    //validate:\n    if(!cid) throw new Error(\"incorrect input string for Pod (no checkpoint): \" + input);\n    //init\n    this.position = new Point(x, y);\n    this.velocity = new Vector(_zeroPoint, new Point(vx, vy));\n    this.angleX = a;\n    this.orientation = _horizonVector.rotate(this.angleX);\n    this.nextCheckpointUpdated = (this.nextCheckpointId != cid);\n    this.nextCheckpointId = cid;\n    return this;\n}\n\nfunction updatePodCheckpoints() {\n    if(this.nextCheckpointUpdated) {\n        this.checkpoint1 = trackConfig.checkpoints[this.nextCheckpointId];\n        this.checkpoint2 = trackConfig.checkpoints[(this.nextCheckpointId+1) % trackConfig.numCheckpoints];\n        this.totalCheckpoints++;\n    }\n    return this;\n}\n\n// return relative stats from pod to point {distance, angle, velocityAngle}\nfunction podRelativeStats(p) {\n    var res = {};\n    res.vector = new Vector(this.position, p);\n    res.distance = res.vector.value(); // distance to the point\n    res.angle = res.vector.angleTo(this.orientation); //angleX is relative angle\n    res.angleAbs = Math.abs(res.angle);\n    res.angleVelocity = res.vector.angleTo(this.velocity);\n    res.angleVelocityAbs = Math.abs(res.angleVelocity);\n    \n    return res;\n}\n\n\n// calculated optimal direction and thrust of pod to move to the Point p1 \n// considering that after reaching p1 it has to move towards p2\n// returns {x: x, y: y, thrust: thrust}\nfunction podOptimalMoveOld2() {\n    var p1 = this.checkpoint1;\n    var p2 = this.checkpoint2;\n    printErr(\"podOptimalMove p1: \" + JSON.stringify(p1));\n    var p1Stat = this.relativeStats(p1);\n\n//    printErr(\"p1Stat: \" + JSON.stringify(p1Stat));\n//    printErr(\"p2Stat: \" + JSON.stringify(p2Stat));\n\n    var thrust = (p1Stat.angleAbs>90) ? 0 : 100; // Math.round(100*Math.cos(cpAngleRad/6));\n\n    var k = 40 / ((p1Stat.angleVelocityAbs>10)?p1Stat.angleVelocityAbs:10);\n    var radius = this.velocity.value() * k;\n    var p1p2Angle = (new Vector(p1, p2)).angle();\n    var idealAngle =  p1Stat.vector.add(new Vector(p1, p2)).angle();\n    var intentAngle =  p1Stat.vector.angle();\n//    printErr(\"podOptimalMove radius: \" + radius + \" idealAngle: \" + idealAngle + \" intentAngle: \" + intentAngle + \" p1p2Angle: \" + p1p2Angle)\n    var target = p1.add(_horizonVector.scale(radius/100)\n        .rotate((idealAngle>p1p2Angle)?(idealAngle-90):(idealAngle+90))); // set target to the rotation point\n\n//    printErr(\"podOptimalMove first target: \" + JSON.stringify(target));\n\n    if(this.position.distance(target) > radius*2 )\n        target = target.add(_horizonVector.scale(radius/100).rotate(360 - idealAngle - intentAngle));\n\n//    printErr(\"podOptimalMove second target: \" + JSON.stringify(target));\n\n    target = p1;\n\n    var targStat = this.relativeStats(target);\n\n    // patch target when far and moving in wrong direction\n    if(targStat.angleVelocityAbs < 90 && targStat.angleAbs < 90 && targStat.distance > 2000) \n        target = target.rotate(this.position, targStat.angleVelocity);\n\n//    printErr(\"podOptimalMove third target: \" + JSON.stringify(target));\n\n    if(p1Stat.distance < radius) {  \n//        if(p1Stat.distance * p1Stat.angleVelocityAbs / this.velocity.value < 40) {\n            target = p2;\n//        } \n    }\n    \n    if (!boostUsed && p1Stat.angleAbs < 10 && p1Stat.distance > 5000) {\n        thrust = \"BOOST\";\n        boostUsed = true;\n    }\n\n    return Object.assign({thrust: thrust}, target);\n}\n\n\n// calculated optimal direction and thrust of pod to move to the Point p1 \n// considering that after reaching p1 it has to move towards p2\n// returns {x: x, y: y, thrust: thrust}\nfunction podOptimalMove() {\n    var [p1, p2] = [this.checkpoint1, this.checkpoint2];\n    var p1Stat = this.relativeStats(p1);\n\n    var target = p1;\n\n    printErr(\"turns: \" + p1Stat.distance/this.velocity.value() + \" distance: \" + this.extrapolatePosition(p1Stat.distance/this.velocity.value())\n                .distance(p1));\n\n    if(p1Stat.distance < 3000)\n        if(this.extrapolatePosition(p1Stat.distance/this.velocity.value())\n                .distance(p1) < 600) target = p2;\n\n    var targetStat = this.relativeStats(target);\n    var thrust = (targetStat.angleAbs>80) ? 0 : 100; // Math.round(100*Math.cos(cpAngleRad/6));\n\n    \n    if (!boostUsed && p1Stat.angleAbs < 10 && p1Stat.distance > 5000) {\n        thrust = \"BOOST\";\n        boostUsed = true;\n    }\n\n    return Object.assign({thrust: thrust}, target);\n}\n\n\n\nfunction podHuntMove() {\n    if(!this.target) return Object.assign({thrust: 100}, this.checkpoint1);\n    var target;\n    var thrust = 100;\n    var targetPod = this.target;\n    var targetDistance = this.position.distance(targetPod.position);\n    var tStat = this.relativeStats(targetPod.position);\n    if(tStat.distance<1400) // attack!!!\n        target = targetPod.position;\n    else if(this.isMovingTowardsMe(targetPod)) {\n        target = targetPod.extrapolatePosition(Math.round(tStat.distance/2/(targetPod.velocity.value()+1)));\n        if(tStat.distance > 3000 && tStat.angleVelocityAbs < 90)\n            target = target.rotate(this.position, tStat.angleVelocity);\n        else if(tStat.distance > 3000 && tStat.angleVelocityAbs < 120)\n            target = target.rotate(this.position, tStat.angleVelocity/2);\n    } else {\n        target = targetPod.checkpoint2;\n        if (this.position.distance(target) < 3000) thrust = 40;\n    }\n//    printErr(\"turns to target: \" + Math.ceil(targetDistance/(targetPod.velocity.value+1)) + \" velocity \" + targetPod.velocity.value);\n    return Object.assign({thrust: thrust}, target);\n}\n\nfunction podExtrapolatePosition(turns) {\n    var intentVector = new Vector(this.position, this.checkpoint1);\n    \n    var accelerationImpact = (1 + turns) * turns / 2 * Math.pow(.85, turns-1);\n\n    return this.position.add(this.velocity.scale(turns * Math.pow(.85, turns-1)))\n        .add( intentVector.scale(accelerationImpact / intentVector.value() * 50) )  //add thrust approximation\n        .add( this.orientation.scale(accelerationImpact / 2) );  //add orientation approximation\n}\n\nfunction podIsMovingTowardsMe(pod) {\n    var intentVector = new Vector(pod.position, pod.checkpoint1);\n    return Math.abs(intentVector\n        .angleTo(new Vector(pod.position, this.position)))<60;\n}\n\n// returns collision impact 0-1, 0 for no collision, 1 for strongest\nfunction podCollisionImpact(pods) {\n    for(var i in pods) {\n        var pod = pods[i];\n        var collisionDistance = this.position.add(this.velocity)\n            .distance(pod.position.add(pod.velocity));\n        if (collisionDistance<800) {\n            var impact = (800-collisionDistance)/800*Math.abs(this.velocity.angleTo(pod.velocity))/45;\n            printErr(\"To pod  \" + i + \": \" + JSON.stringify(pod));\n            printErr(\"Collision distance: \" + collisionDistance + \" impact \" + impact)\n            return impact;\n        }\n    }\n    \n    return 0\n}\n\n//pick the leader for chasing\nfunction podPickOptimalTarget(pods) {\n    if(this.target && this.position.distance(this.target)<2000) return this;\n    if(!this.target) this.target = pods[0];\n    for(var i in pods)\n        if(pods[i].totalCheckpoints>this.target.totalCheckpoints)\n            this.target = pods[i];\n            \n    printErr(\"Pick target: \" + JSON.stringify(this.target));\n    return this;\n}\n\n\nfunction podCalculateMove(intentVector, thrust) {\n    var intentAngle = intentVector.angle();\n    var angle = intentAngle - this.angleX; // Angle might change by 18\n    if (angle>18) angle = 18;\n    else if (angle < -18) angle = -18;\n    angle += this.angleX;\n\n    printErr(\"podCalculateMove intent \" + JSON.stringify(intentVector) + \" intentAngle \" + intentAngle + \" angle \" + angle + \" this.angleX \" + this.angleX)\n\n    var thrustVector = _horizonVector.rotate(angle).scale(thrust / 100);\n    velocity = this.velocity.scale(.85).add(thrustVector);\n    position = this.position.add(velocity);\n\n    return {\n            x: position.x,\n            y: position.y,\n            vx: velocity.x,\n            vy: velocity.y,\n            angle: angle,\n            position: position\n        };\n}\n\n\n\n//// General initialization\n\nfunction GlobalInit() {\n    var laps = parseInt(readline());\n\n    var checkpointsNum = parseInt(readline());\n    var checkpoints = [];\n    \n    while(checkpointsNum--) {\n        var inputs = readline().split(' ').map(toInt);\n        checkpoints.push(new Point(inputs[0], inputs[1]));\n    }\n\n    trackConfig = {\n        laps: laps,\n        checkpoints: checkpoints,\n        numCheckpoints: checkpoints.length,\n        totalCheckpointsLaps: (laps * checkpoints.length)\n    };\n    \n    printErr(\"Initialized trackConfig: \" + JSON.stringify(trackConfig));\n}\n\nfunction toInt(s) {\n    return parseInt(s);\n}\n",
+			"file": "mainloop.js",
+			"file_size": 12610,
+			"file_write_time": 131126242340000000,
+			"settings":
+			{
+				"buffer_size": 13616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.json",
+			"settings":
+			{
+				"buffer_size": 58,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"last_filter": "packa",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: self"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/max/src/codinggame/coders_strike_back"
+	],
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cast_sender.js",
+			"static.doubleclick.net",
+			"hero.artbreezestudios.com",
+			"okvideo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "printapi.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "gamecontroller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								632,
+								632
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "mainloop.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13616,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5321,
+								5321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "config.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 58,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 169.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

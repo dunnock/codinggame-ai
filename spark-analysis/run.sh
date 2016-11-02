@@ -1,0 +1,1 @@
+${SPARK_HOME}/bin/spark-shell --conf "spark.mongodb.input.uri=mongodb://mongodb:27017/coders-stats.experiments" --conf "spark.mongodb.output.uri=mongodb://mongodb/coders-stats.analytics" --packages org.mongodb.spark:mongo-spark-connector_${SCALA_VERSION}:${MONGO_SPARK_VERSION} -i ./coders_dataset.scala
